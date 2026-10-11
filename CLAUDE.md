@@ -3,7 +3,7 @@
 Read `PLAN.md` first (the specification). The briefs in `research/` are the source of truth for every phonics rule, question level and creature fact; the plan defers to them.
 
 ## Who this is for
-Finn (6, Year 2, Little Wandle Phase 5) reads with his dad on a Samsung Galaxy Tab in landscape, with his little brother Zeb (3) listening in. The stories star Finn and Zeb as explorers. Finn reads the pages; everyone talks about the choices; the Commander (Finn) taps.
+Finn (6, Year 2, Little Wandle Phase 5) reads with Mum or Dad on a Samsung Galaxy Tab (the app never assumes which: say "the grown-up" or "together", not "Dad") in landscape, with his little brother Zeb (3) listening in. The stories star Finn and Zeb as explorers. Finn reads the pages; everyone talks about the choices; the Commander (Finn) taps.
 
 ## Sister apps
 Astra Finn (`C:\1 Astra Nova - Finn`, the space app), Astra Maths (`C:\1. Astra Nova Synthesis  - Maths Tutor`) and Astra Bleeps (`C:\1. Astra Bleeps - Chiptunes`). This app is its own GitHub repo (`philhandley/astra-reads`), live at https://philhandley.github.io/astra-reads/. All four apps share one origin, so the service worker only deletes caches with the `astrareads-` prefix and the manifest `id` is the absolute `/astra-reads/`.

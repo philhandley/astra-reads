@@ -1,6 +1,6 @@
 # Astra Reads: the plan
 
-A phonics storybook app for Finn (6, Year 2, Little Wandle Phase 5) and his little brother Zeb (3), read with Dad on a Samsung tablet in landscape. It is the fourth sister app after Astra Finn, Astra Maths and Astra Bleeps, and it borrows their shape: a static PWA, no build step, installed from GitHub Pages, works offline.
+A phonics storybook app for Finn (6, Year 2, Little Wandle Phase 5) and his little brother Zeb (3), read with Mum or Dad on a Samsung tablet in landscape. It is the fourth sister app after Astra Finn, Astra Maths and Astra Bleeps, and it borrows their shape: a static PWA, no build step, installed from GitHub Pages, works offline.
 
 ## 1. What it is
 
@@ -15,7 +15,7 @@ A shelf of **Explorer Cases**: interactive decodable stories in which Finn and Z
 
 Every chapter follows the Explorer Case formula (research/03): the Den, a ping (a call for help or a question nobody can answer), gear up and a vehicle, arrival, a which-way choice, meeting the creature or place, a Big Question with no right answer, the real feature of the creature or place helps, home and "Case cracked!", then the Case File (real facts), four comprehension questions, a debrief and a patch.
 
-## 2. Reading rules (from Dad's note)
+## 2. Reading rules (from the handwritten brief)
 
 - Level: Little Wandle Phase 5 (Oxford Reading Tree Phonics Level 5). Every word is decodable with Phase 2 to 5 grapheme-phoneme correspondences or is a Little Wandle tricky word (research/01). Names (Finn, Zeb, Mars) are allowed.
 - **At most two lines of text per page**, each line at most about 40 characters.
@@ -24,7 +24,7 @@ Every chapter follows the Explorer Case formula (research/03): the Den, a ping (
 - A Sound card opens each story (the sound, its spellings, example words to tap) and a Tricky-words card lists the tricky words in the story.
 - Two or three choices per story: one or two **which-way** choices (fun, both fine) and one **Big Question** (a dilemma with three picture-sized options, no right answer, a reveal that says what real explorers do without crowning an option). Branches are one or two pages and fold back into the story. No fail states.
 - At the end: **four multiple-choice comprehension questions following Blank's levels** (1 find, 2 describe, 3 explain or predict, 4 reason). Level 1 uses picture options from the story. A miss gets "Not that one, have another look" and a Look-back picture, never a cross or a score.
-- Then a debrief ("What was your favourite part?" plus one question for Dad to ask) and a patch for the Crew Log.
+- Then a debrief ("What was your favourite part?" plus one question for the grown-up reading along to ask; never names Mum or Dad) and a patch for the Crew Log.
 - Finn and Zeb are the heroes of every story. Nothing frightening: no one is hurt or in danger.
 
 ## 3. Pictures

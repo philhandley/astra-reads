@@ -85,7 +85,7 @@ export function runQuiz(book, mount, state, { imgTag, themeCls, step = 'quiz' } 
       <div class="side"><div class="img">${imgTag(book, book.cover, book.title)}</div></div>
       <div class="main">
         <div class="eyebrow">Debrief</div>
-        <h2>Case closed. Dad asks...</h2>
+        <h2>Case closed. Time to talk!</h2>
         <div class="fact"><span class="n">1</span><span class="t">${esc(q1)}</span><span class="s" data-i="0"></span></div>
         <div class="fact"><span class="n">2</span><span class="t">${esc(d.question || '')}</span><span class="s" data-i="1"></span></div>
         <p class="muted">There are no wrong answers in a debrief.</p>
