@@ -61,7 +61,7 @@ Every page has its own picture (one or two consecutive pages may share one), gen
 
 ## 5a. Picture status (11 October 2026)
 
-Ten pictures are in: the Dino Trail cover and its first eight pages (p01 to p04, c01, b1a, b1a2, b1b). The other 66 (the rest of the Dino Trail, and all of Night Flight, Deep in the Green and The Glow Below, including covers and Case File portraits) are still to be generated. Every one already has its brief in the book JSON; `python tools/prompts.py <book> --missing` prints them ready to paste. Until then those pages show a soft themed backdrop. Generation stopped when Figma's `generate_image` returned "You have reached your usage limit" (the Starter team's AI allowance or the View seat's MCP allowance). Any generator works with the same briefs; describe the boys by appearance only, never by name.
+All 89 pictures are in (every page, cover and Case File portrait of the four chapter-1 books), made with Figma's `generate_image` (gemini-3.1-flash-image) on a Professional plan with a Full seat; the Starter plan's View seat ran out after ten. Each was checked for the brothers' look, no stray words, and that the picture matches the words on the page. Two lessons: the model will not reliably draw five animals in a row (Deep in the Green now counts four gorillas), and it paints words onto screens and boats unless told not to (the style brief in `tools/prompts.py` now forbids it). New chapters: write the `prompt` for each page, then `python tools/prompts.py <book> --missing`.
 
 ## 6. Build order
 

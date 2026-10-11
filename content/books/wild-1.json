@@ -14,10 +14,10 @@
     "examples": { "ee": "deep", "ea": "leaf", "y": "happy" },
     "intro": "Listen for the /ee/ sound, as in deep. In this story it is spelt three ways. Tap a word to hear it."
   },
-  "tricky": ["they", "our", "what", "should", "says"],
+  "tricky": ["they", "our", "two", "what", "should", "says"],
   "words": { "den": "d|e|n", "ping": "p|i|ng", "photos": "ph|o|t|o|s", "achoo": "a|ch|oo", "misty": "m|i|s|t|y", "itself": "i|t|s|e|l|f" },
   "start": "p1",
-  "cracked": "Five gorillas, safe and well, counted and photographed. Finn and Zeb cracked the case!",
+  "cracked": "Four gorillas, safe and well, counted and photographed. Finn and Zeb cracked the case!",
   "pages": {
     "p1": { "id": "p1", "img": "p01.webp", "text": ["Finn and Zeb are in the Den. Ping!", "A ranger needs them to count gorillas."], "next": "p2",
       "prompt": "Inside the cosy explorer den, the wall screen shows a friendly park ranger in a green uniform waving from a misty mountain forest, with a gorilla silhouette and a flashing alert; Finn grabs his explorer hat, Zeb grabs a camera." },
@@ -38,8 +38,8 @@
       "prompt": "Finn and Zeb creep on tiptoe along a trail of bent and trampled plants in the misty forest; Finn points at chewed green stems, Zeb holds his nose and points at a pile of green gorilla poo, both grinning." },
     "p5": { "id": "p5", "img": "p05.webp", "text": ["Then they see them. A big silverback sits", "in the green, eating leaves. Munch, munch."], "next": "p6",
       "prompt": "A huge gentle silverback mountain gorilla with a silver back sits calmly in lush green plants munching a leafy stem; Finn and Zeb peek from behind ferns a good distance away, the ranger behind them, everyone quiet and amazed." },
-    "p6": { "id": "p6", "img": "p06.webp", "text": ["Three mums and a baby. Finn counts: five!", "Zeb clicks the camera. Click, click."], "next": "p7",
-      "prompt": "A mountain gorilla family in a sunny clearing: the silverback, three mother gorillas and one tiny baby gorilla riding on a mother's back; Finn counts on his fingers holding up five, Zeb takes a photo with his camera from behind a log." },
+    "p6": { "id": "p6", "img": "p06.webp", "text": ["Two mums and a baby. Finn counts: four!", "Zeb clicks the camera. Click, click."], "next": "p7",
+      "prompt": "A mountain gorilla family in a sunny clearing: one silverback, two mother gorillas and one tiny baby gorilla in a row; Finn counts on his fingers holding up five, Zeb takes a photo with his camera from behind a log." },
     "p7": { "id": "p7", "img": "p07.webp", "text": ["The silverback stands and beats his chest.", "Pok, pok, pok! It means: this is my team."], "next": "c2",
       "prompt": "The big silverback gorilla stands tall on two legs and beats his chest with cupped hands, mouth open in a hoot, while his family watches calmly behind him; Finn and Zeb watch wide-eyed and smiling from a safe distance behind a fallen log." },
     "c2": { "id": "c2", "img": "c02.webp", "text": ["The baby creeps up to Zeb. It wants to", "see the camera! What should they do?"],
@@ -55,8 +55,8 @@
       "prompt": "Finn and Zeb step backwards slowly and carefully along the forest path, Finn holding Zeb's hand; the tiny baby gorilla squeaks and bumbles back across the clearing to its mother's open arms." },
     "b2c": { "id": "b2c", "img": "b2c.webp", "text": ["Finn holds the camera up high. The baby", "sees itself! It beats its tiny chest."], "next": "p8", "reveal": "c2",
       "prompt": "Finn holds the camera up high so its screen shows the baby gorilla its own face; the tiny baby gorilla stands up and beats its little chest proudly, Zeb giggles, the mother gorilla watches with a soft smile." },
-    "p8": { "id": "p8", "img": "p08.webp", "text": ["The ranger grins. Five gorillas, safe and", "well. Finn adds them to the count sheet."], "next": "c3",
-      "prompt": "The park ranger kneels beside Finn, who writes on a clipboard count sheet showing five gorilla drawings with ticks; Zeb shows the camera screen with a gorilla photo; the gorilla family rests peacefully in the green behind." },
+    "p8": { "id": "p8", "img": "p08.webp", "text": ["The ranger grins. Four gorillas, safe and", "well. Finn adds them to the count sheet."], "next": "c3",
+      "prompt": "The park ranger kneels beside Finn, who writes on a clipboard count sheet showing four gorilla drawings with ticks; Zeb shows the camera screen with a gorilla photo; the gorilla family rests peacefully in the green behind." },
     "c3": { "id": "c3", "img": "c03.webp", "text": ["Rain begins to fall. The jeep is far.", "Which way back, Finn?"],
       "choice": { "kind": "way", "options": [
         { "label": "Run down the track", "icon": "run", "next": "b3a" },
@@ -66,7 +66,7 @@
       "prompt": "Finn and Zeb run and slide down the muddy rainforest track in the pouring rain, Zeb cheering with arms up, Finn laughing, mud splashing, the green jeep waiting at the bottom with the ranger holding an umbrella." },
     "b3b": { "id": "b3b", "img": "b3b.webp", "text": ["They sit under huge leaves. Drip, drip.", "Zeb sees a beetle. Then the rain stops."], "next": "p9",
       "prompt": "Finn and Zeb sit snugly under an enormous green leaf like an umbrella as rain drips off its edges; Zeb points delightedly at a shiny rainbow-coloured beetle on a stem; sunshine beginning to break through the mist." },
-    "p9": { "id": "p9", "img": "p09.webp", "text": ["Back in the Den, the photos go up on", "the screen. Five gorillas! Case cracked!"], "next": null,
+    "p9": { "id": "p9", "img": "p09.webp", "text": ["Back in the Den, the photos go up on", "the screen. Four gorillas! Case cracked!"], "next": null,
       "prompt": "Back in the cosy explorer den, the big wall screen shows Zeb's photos of the gorilla family with a big green tick; Zeb stands proudly with his camera, Finn pins the count sheet to the corkboard." }
   },
   "casefile": {

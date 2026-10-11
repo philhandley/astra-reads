@@ -16,7 +16,7 @@ ROOT = Path(__file__).resolve().parent.parent
 STYLE = ("Children's picture-book illustration in a clean, bold, flat cartoon style like a modern animated kids' "
          "detective show: thick clean outlines, bright saturated colours, simple soft shading, friendly rounded "
          "shapes, expressive faces. The picture fills the whole frame edge to edge: no border, no white bars, "
-         "no text, no letters, no logos. ")
+         "no logos. Absolutely no words, letters or numbers anywhere, including on screens, signs, labels and notes. ")
 
 BROTHERS = ("The two brothers always look the same: FINN is six, taller, with short neat strawberry-blond hair, "
             "blue-grey eyes, a few freckles and a big friendly smile{finn}. ZEB is three, shorter, with a blond bowl "
