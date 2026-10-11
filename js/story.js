@@ -268,6 +268,7 @@ export function startBook(book, mount, { step = 'cover', page = null } = {}) {
   else if (step === 'casefile') showCaseFile();
   else if (step === 'quiz' || step === 'debrief' || step === 'patch') runQuiz(book, mount, state, { imgTag, themeCls, step });
   else if (step === 'sound') showSound();
+  else if (step === 'tricky') showTricky();
   else showCover();
 }
 
