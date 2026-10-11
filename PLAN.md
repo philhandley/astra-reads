@@ -59,6 +59,10 @@ Every page has its own picture (one or two consecutive pages may share one), gen
   patch: { name, colour, icon } }
 ```
 
+## 5a. Picture status (11 October 2026)
+
+Ten pictures are in: the Dino Trail cover and its first eight pages (p01 to p04, c01, b1a, b1a2, b1b). The other 66 (the rest of the Dino Trail, and all of Night Flight, Deep in the Green and The Glow Below, including covers and Case File portraits) are still to be generated. Every one already has its brief in the book JSON; `python tools/prompts.py <book> --missing` prints them ready to paste. Until then those pages show a soft themed backdrop. Generation stopped because the Figma seat used for `generate_image` is a View seat (20 MCP calls a month); a Dev or Full seat allows 200 a day.
+
 ## 6. Build order
 
 1. Engine, styles, PWA plumbing, tools (this session).
