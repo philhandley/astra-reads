@@ -1,0 +1,23 @@
+<!doctype html><meta charset="utf-8"><title>sw test</title>
+<script>if (/[?&]hold=/.test(location.search)) document.write('<iframe src="/__hold?s=' + location.search.match(/hold=(\d+)/)[1] + '" style="display:none"></iframe>');</script>
+<script type="module">
+const log = (...a) => { console.log('SWTEST', ...a); const p = document.createElement('pre'); p.textContent = 'SWTEST ' + a.join(' '); document.body.appendChild(p); };
+try {
+  const reg = await navigator.serviceWorker.register('../sw.js', { scope: '../' });
+  log('registered', reg.scope);
+  const sw = reg.installing || reg.waiting || reg.active;
+  let ready = sw.state === 'activated';
+  sw.addEventListener('statechange', () => { log('state', sw.state); if (sw.state === 'activated' || sw.state === 'redundant') ready = true; });
+  for (let i = 0; i < 150 && !ready; i++) { try { await fetch('/__slow?' + i, { cache: 'no-store' }); } catch (e) { await new Promise(r => setTimeout(r, 1000)); } }
+  log('final state', sw.state);
+  const keys = await caches.keys();
+  const c = await caches.open(keys.find(k => k.startsWith('astrareads')));
+  const n = (await c.keys()).length;
+  const has = async u => !!(await c.match(new URL(u, location.href).href));
+  log('cache', keys.join(','), 'entries', n,
+    'shell', await has('../'), 'app', await has('../js/app.js'), 'story', await has('../js/story.js'),
+    'book', await has('../content/books/dino-1.json'), 'picture', await has('../assets/img/books/dino-1/p01.webp'),
+    'icon', await has('../assets/icons/icon-192.png'),
+    'fonts', await has('https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Lexend:wght@400;500;600;700;800&display=swap'));
+} catch (e) { log('ERROR', e.message); }
+</script>

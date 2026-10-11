@@ -1,0 +1,20 @@
+{
+  "name": "Astra Reads",
+  "short_name": "Astra Reads",
+  "description": "Explorer Cases: interactive phonics stories starring Finn and Zeb.",
+  "id": "/astra-reads/",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["fullscreen", "standalone"],
+  "orientation": "landscape",
+  "background_color": "#faf8f3",
+  "theme_color": "#faf8f3",
+  "lang": "en-GB",
+  "categories": ["education", "kids", "books"],
+  "icons": [
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
