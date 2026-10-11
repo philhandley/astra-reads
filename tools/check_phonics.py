@@ -26,6 +26,10 @@ EA_SHORT = {'head', 'bread', 'ready', 'heavy', 'weather', 'feather', 'instead', 
 EA_AI = {'great', 'break', 'steak', 'greater', 'breaks', 'breaking'}
 OW_COW = {'cow', 'now', 'how', 'down', 'town', 'brown', 'owl', 'crowd', 'flower', 'shower', 'tower', 'power', 'growl', 'howl', 'clown', 'frown', 'crown', 'gown', 'wow', 'allow', 'vowel', 'towel', 'bow', 'row', 'crowded', 'downstairs', 'flowers', 'owls', 'powerful', 'drown', 'prowl', 'scowl', 'fowl', 'vow', 'sow', 'somehow', 'cows', 'towns', 'crowds', 'showers', 'towers', 'growls', 'howls', 'clowns'}
 EY_AI = {'they', 'grey', 'obey', 'prey', 'hey', 'survey', 'whey', 'greys'}
+OU_NOT_OW = {'you', 'your', 'yours', 'could', 'would', 'should', 'four', 'pour', 'tour', 'soup', 'group', 'groups', 'through', 'thought', 'touch', 'young', 'country', 'cousin', 'double', 'trouble', 'shoulder', 'shoulders', 'boulder', 'boulders', 'mould', 'youth', 'route', 'courage', 'enough', 'tough', 'rough', 'cough', 'though', 'dough', 'famous', 'nervous', 'enormous', 'dangerous'}
+EAR_UR = {'learn', 'learns', 'learned', 'learnt', 'learning', 'early', 'earlier', 'earth', 'earn', 'earns', 'heard', 'search', 'searches', 'searched', 'pearl', 'pearls', 'yearn', 'rehearse'}
+EAR_AIR = {'bear', 'bears', 'pear', 'pears', 'wear', 'wears', 'tear', 'swear'}
+OR_UR = {'work', 'works', 'worked', 'word', 'words', 'world', 'worlds', 'worm', 'worms', 'worse', 'worst', 'worth'}
 
 # Mirrors OVERRIDES in js/core/phonics.js (keep the two in step).
 OVERRIDES = {}
@@ -63,6 +67,18 @@ def sound_of(g, w, at_end):
         return 'ow' if w in OW_COW else 'oa'
     if g == 'ey':
         return 'ai' if w in EY_AI else 'ee'
+    if g == 'ou':
+        return 'other' if w in OU_NOT_OW else 'ow'
+    if g == 'ear':
+        return 'ur' if w in EAR_UR else 'air' if w in EAR_AIR else 'ear'
+    if g == 'or':
+        return 'ur' if w in OR_UR else 'or'
+    if g in ('ir', 'ur'):
+        return 'ur'
+    if g in ('aw', 'ore', 'au', 'aur', 'oar', 'oor'):
+        return 'or'
+    if g in ('ue', 'ew', 'u_e'):
+        return 'oo'
     if g in ('ai', 'ay', 'a_e', 'eigh', 'aigh'):
         return 'ai'
     if g in ('ee', 'e_e'):
@@ -119,7 +135,7 @@ def split_word(word, overrides):
                 if rest.startswith(g):
                     hit = g
                     break
-        if not hit:
+        if not hit and i > 0:
             for g in END_ONLY:
                 if rest.startswith(g) and i + len(g) <= end and END_REST.match(w[i + len(g):]):
                     hit = g

@@ -1,8 +1,44 @@
 {
   "themes": [
-    { "id": "dino", "series": "Time Travellers", "icon": "dino", "chapters": 10, "books": ["dino-1"] },
-    { "id": "space", "series": "Space Explorers", "icon": "rocket", "chapters": 10, "books": ["space-1"] },
-    { "id": "wild", "series": "Wildlife Explorers", "icon": "leaf", "chapters": 10, "books": ["wild-1"] },
-    { "id": "ocean", "series": "Ocean Explorers", "icon": "wave", "chapters": 10, "books": ["ocean-1"] }
+    {
+      "id": "dino",
+      "series": "Time Travellers",
+      "icon": "dino",
+      "chapters": 10,
+      "books": [
+        "dino-1",
+        "dino-2"
+      ]
+    },
+    {
+      "id": "space",
+      "series": "Space Explorers",
+      "icon": "rocket",
+      "chapters": 10,
+      "books": [
+        "space-1",
+        "space-2"
+      ]
+    },
+    {
+      "id": "wild",
+      "series": "Wildlife Explorers",
+      "icon": "leaf",
+      "chapters": 10,
+      "books": [
+        "wild-1",
+        "wild-2"
+      ]
+    },
+    {
+      "id": "ocean",
+      "series": "Ocean Explorers",
+      "icon": "wave",
+      "chapters": 10,
+      "books": [
+        "ocean-1",
+        "ocean-2"
+      ]
+    }
   ]
 }

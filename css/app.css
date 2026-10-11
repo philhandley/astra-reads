@@ -141,10 +141,14 @@ svg { display: block; }
 .shelf h2 { font-size: 28px; }
 .shelf .blurb { color: var(--ink-2); font-size: 17px; line-height: 1.35; }
 .shelf .foot { margin-top: auto; display: flex; align-items: center; gap: 12px; }
-.shelf .chapters { display: flex; gap: 5px; margin-left: auto; }
-.shelf .chapters i { width: 9px; height: 9px; border-radius: 50%; background: var(--line-2); display: block; }
-.shelf .chapters i.on { background: var(--theme); }
-.shelf .chapters i.done { background: var(--good); }
+.shelf .series .chapno { margin-left: auto; color: var(--ink-3); letter-spacing: .06em; }
+.shelf .chapters { display: flex; gap: 8px; margin-left: auto; align-items: center; flex-wrap: nowrap; }
+.shelf .chapters i.soon { width: 8px; height: 8px; border-radius: 50%; background: var(--line-2); display: block; }
+.shelf .chapters .ch { width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--line-2); background: var(--card); color: var(--ink-2); font-weight: 800; font-size: 17px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; padding: 0; transition: transform .08s, background .12s; }
+.shelf .chapters .ch:active { transform: scale(.92); }
+.shelf .chapters .ch svg { width: 20px; height: 20px; }
+.shelf .chapters .ch.done { border-color: var(--good); color: var(--good); }
+.shelf .chapters .ch.sel { background: var(--theme); border-color: var(--theme); color: #fff; }
 .homefoot { grid-column: 1 / -1; display: flex; gap: 14px; justify-content: center; padding-top: 6px; }
 
 /* ---------------- Intro cards (cover, sound, tricky) ---------------- */

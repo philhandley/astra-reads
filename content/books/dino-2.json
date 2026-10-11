@@ -1,0 +1,420 @@
+{
+  "id": "dino-2",
+  "theme": "dino",
+  "chapter": 2,
+  "title": "The Three Horns",
+  "blurb": "A giant fossil horn arrives at the Den. Finn and Zeb go back in time to find out what the horns were for.",
+  "cover": "cover.webp",
+  "cover_prompt": "Finn and Zeb stand heroically at dawn on a misty prehistoric plain beside the glowing round time gate, with a huge gentle Triceratops behind them showing its two long brow horns, short nose horn and big bony frill, ferns all around and a storm cloud far away.",
+  "sound": {
+    "phoneme": "or",
+    "label": "/or/",
+    "say": "or, as in horn",
+    "spellings": [
+      "or",
+      "aw",
+      "ore"
+    ],
+    "examples": {
+      "or": "horn",
+      "aw": "claw",
+      "ore": "more"
+    },
+    "intro": "Listen for the /or/ sound, as in horn. In this story it is spelt three ways. Tap a word to hear it."
+  },
+  "tricky": [
+    "they",
+    "their",
+    "sure",
+    "two",
+    "one",
+    "eyes",
+    "should"
+  ],
+  "words": {
+    "den": "d|e|n",
+    "ping": "p|i|ng",
+    "triceratops": "t|r|i|c|er|a|t|o|p|s",
+    "shove": "sh|o|ve",
+    "fossil": "f|o|ss|i|l",
+    "notebook": "n|o_e|t|b|oo|k",
+    "lets": "l|e|t|s"
+  },
+  "start": "p1",
+  "cracked": "The horns were for showing off and for pushing contests. Finn and Zeb cracked the case!",
+  "pages": {
+    "p1": {
+      "id": "p1",
+      "img": "p01.webp",
+      "text": [
+        "Finn and Zeb are in the Den. Ping!",
+        "A fossil horn has come in. It is huge!"
+      ],
+      "next": "p2",
+      "prompt": "Inside the cosy explorer den full of maps and fossils, a delivery crate has just been opened on the floor, revealing a huge curved fossil horn as long as Zeb is tall; Finn kneels beside it amazed while Zeb stands next to it to compare his height, a wall screen flashing behind them."
+    },
+    "p2": {
+      "id": "p2",
+      "img": "p02.webp",
+      "text": [
+        "What was the horn for? Nobody is sure.",
+        "Time to go back and see. Let's go!"
+      ],
+      "next": "p3",
+      "prompt": "Finn and Zeb in the explorer den look up at a big wall screen showing an outline of a three-horned dinosaur skull with a big question mark symbol; Finn holds his notebook and pencil, Zeb puts on his explorer hat, ready to go."
+    },
+    "p3": {
+      "id": "p3",
+      "img": "p03.webp",
+      "text": [
+        "They put on the time packs. The gate hums.",
+        "Zoom! They step out at dawn."
+      ],
+      "next": "p4",
+      "prompt": "Finn and Zeb, wearing small silver backpacks with glowing blue dials, step out of the glowing round time gate onto a misty prehistoric plain at dawn, the sky pink and gold, giant ferns and tall cycad plants around them."
+    },
+    "p4": {
+      "id": "p4",
+      "img": "p04.webp",
+      "text": [
+        "It is cool and misty. Ferns drip.",
+        "Then they hear a snort, and a stomp."
+      ],
+      "next": "c1",
+      "prompt": "In a cool misty prehistoric forest of dripping ferns at dawn, Finn and Zeb freeze and cup their ears, listening, eyes wide; in the mist behind the ferns the shadow of a huge horned dinosaur head can just be seen."
+    },
+    "c1": {
+      "id": "c1",
+      "img": "c01.webp",
+      "text": [
+        "Big prints go north, and small prints",
+        "go to the shore. Which way, Finn?"
+      ],
+      "choice": {
+        "kind": "way",
+        "options": [
+          {
+            "label": "Follow the big prints",
+            "icon": "footprint",
+            "next": "b1a"
+          },
+          {
+            "label": "Follow the small prints",
+            "icon": "water",
+            "next": "b1b"
+          }
+        ]
+      },
+      "prompt": "On a muddy prehistoric plain, a trail of huge round dinosaur footprints leads away towards distant hills, and a trail of small round footprints leads down to a misty lake shore; Finn and Zeb stand where the trails part, Finn pointing at the big prints, Zeb pointing at the small ones."
+    },
+    "b1a": {
+      "id": "b1a",
+      "img": "b1a.webp",
+      "text": [
+        "The big prints go past torn ferns.",
+        "Crunch! Something big is munching."
+      ],
+      "next": "p5",
+      "prompt": "Finn and Zeb tiptoe along a trail of huge round dinosaur footprints past ferns that have been torn and nibbled; Zeb holds up a chewed fern stem, Finn cups his ear towards a loud crunching sound behind a big rock."
+    },
+    "b1b": {
+      "id": "b1b",
+      "img": "b1b.webp",
+      "text": [
+        "Small prints lead to the shore.",
+        "A baby splashes, then trots off!"
+      ],
+      "next": "p5",
+      "prompt": "At a misty lake shore, a small baby Triceratops with tiny stubby horns splashes happily in the shallow water, then trots off; Finn and Zeb watch from behind reeds, smiling, following its little footprints."
+    },
+    "p5": {
+      "id": "p5",
+      "img": "p05.webp",
+      "text": [
+        "Finn and Zeb peek round a rock. Wow!",
+        "A Triceratops! It has three horns."
+      ],
+      "next": "p6",
+      "prompt": "Finn and Zeb peek around a big mossy rock and see a huge gentle Triceratops eating ferns in a clearing, as long as a bus, with two long horns above its eyes, a short horn on its nose and a big bony frill; the boys look amazed and delighted."
+    },
+    "p6": {
+      "id": "p6",
+      "img": "p06.webp",
+      "text": [
+        "Two long horns stick out over its eyes,",
+        "and a short one is on its nose."
+      ],
+      "next": "p7",
+      "prompt": "Close view of the gentle Triceratops' head from the side, clearly showing its two long brow horns above the eyes and the one short horn on its nose; Finn crouches nearby pointing at the horns while Zeb counts on his fingers, one, two, three."
+    },
+    "p7": {
+      "id": "p7",
+      "img": "p07.webp",
+      "text": [
+        "It has a big bony frill and a beak like",
+        "a parrot. It nibbles more ferns."
+      ],
+      "next": "p8",
+      "prompt": "The Triceratops nibbles a leafy fern with its hooked parrot-like beak, its big bony frill fanned out behind its head, a few ferns in its mouth; Finn sketches it in his notebook, Zeb copies the beak shape with his hands, giggling."
+    },
+    "p8": {
+      "id": "p8",
+      "img": "p08.webp",
+      "text": [
+        "Then a second one stomps up. They lower",
+        "their horns and push. Snort! Shove!"
+      ],
+      "next": "p9",
+      "prompt": "Two big Triceratops face each other in a clearing and gently lock their long horns together, pushing head to head like two stags in a contest, mud flying from their feet; Finn and Zeb watch from a safe distance behind a fallen log, amazed. Nobody is hurt; it looks like a shoving game."
+    },
+    "p9": {
+      "id": "p9",
+      "img": "p09.webp",
+      "text": [
+        "It is not a fight. It is a test of force.",
+        "Then one gets bored and trots off."
+      ],
+      "next": "p10",
+      "prompt": "One Triceratops unhooks its horns and trots away looking bored while the other stands proudly with its frill raised; Finn grins and gives a thumbs up, Zeb copies the proud pose with his chest puffed out."
+    },
+    "p10": {
+      "id": "p10",
+      "img": "p10.webp",
+      "text": [
+        "Finn makes a note: horns are for showing",
+        "off, and for a push. Case cracked!"
+      ],
+      "next": "c2",
+      "prompt": "Finn sits on a log writing in his notebook, which shows a simple drawing of two horned dinosaurs pushing with a tick; Zeb sits beside him wearing a pretend set of three twig horns on his hat, both laughing; a Triceratops grazes in the background."
+    },
+    "c2": {
+      "id": "c2",
+      "img": "c02.webp",
+      "text": [
+        "On the way back, Zeb spots an old horn",
+        "tip in the mud. What should they do?"
+      ],
+      "choice": {
+        "kind": "big",
+        "options": [
+          {
+            "label": "Take it home",
+            "icon": "hand",
+            "next": "b2a"
+          },
+          {
+            "label": "Leave it in the mud",
+            "icon": "rock",
+            "next": "b2b"
+          },
+          {
+            "label": "Draw it in the notebook",
+            "icon": "book",
+            "next": "b2c"
+          }
+        ],
+        "reveal": {
+          "text": "Today, fossil hunters are asked to leave a special fossil where it is and get help from an expert, so it can be dug out with care. But a horn from long ago could teach us so much! Explorers do not all agree. What would you do?",
+          "source": "https://www.scottishgeologytrust.org/?p=7992"
+        }
+      },
+      "prompt": "On a muddy trail, Zeb crouches and points at an old greyish horn tip sticking out of the mud; Finn kneels beside him with his notebook, thinking hard, chin in hand; the glowing time gate waits far off down the trail."
+    },
+    "b2a": {
+      "id": "b2a",
+      "img": "b2a.webp",
+      "text": [
+        "Finn picks up the horn tip. It is heavy!",
+        "He wraps it up to take back to the Den."
+      ],
+      "next": "c3",
+      "reveal": "c2",
+      "prompt": "Finn lifts a heavy old horn tip out of the mud with both hands, straining and grinning, while Zeb holds open a cloth bag to wrap it in; muddy prehistoric trail around them."
+    },
+    "b2b": {
+      "id": "b2b",
+      "img": "b2b.webp",
+      "text": [
+        "They leave the horn tip in the mud.",
+        "One day it may turn into a fossil!"
+      ],
+      "next": "c3",
+      "reveal": "c2",
+      "prompt": "Finn and Zeb gently pat mud back over an old horn tip, leaving it where it lies; a little thought bubble above them shows the same horn as a stone fossil being found by a museum scientist far in the future."
+    },
+    "b2c": {
+      "id": "b2c",
+      "img": "b2c.webp",
+      "text": [
+        "Zeb holds the book. Finn draws the",
+        "horn tip, every bump and crack."
+      ],
+      "next": "c3",
+      "reveal": "c2",
+      "prompt": "Zeb holds Finn's open notebook steady while Finn carefully draws the old horn tip lying in the mud, showing every bump and crack; the drawing on the page is detailed and neat."
+    },
+    "c3": {
+      "id": "c3",
+      "img": "c03.webp",
+      "text": [
+        "A storm is coming! Thunder rumbles.",
+        "Run for the gate, or shelter and wait?"
+      ],
+      "choice": {
+        "kind": "way",
+        "options": [
+          {
+            "label": "Run for the gate",
+            "icon": "run",
+            "next": "b3a"
+          },
+          {
+            "label": "Shelter and wait",
+            "icon": "rock",
+            "next": "b3b"
+          }
+        ]
+      },
+      "prompt": "Dark storm clouds roll over the prehistoric plain with a flash of lightning far away; the glowing time gate is at the end of a long trail in one direction, and a rocky ledge offers shelter in the other; Finn and Zeb hold their hats as the wind blows, deciding."
+    },
+    "b3a": {
+      "id": "b3a",
+      "img": "b3a.webp",
+      "text": [
+        "They dash past the herd in the storm.",
+        "The gate hums. In they jump. Zoom!"
+      ],
+      "next": "p11",
+      "prompt": "Finn and Zeb run hand in hand through the rain past a calm herd of Triceratops sheltering together, towards the glowing time gate; lightning far away, the boys grinning and splashing through puddles."
+    },
+    "b3b": {
+      "id": "b3b",
+      "img": "b3b.webp",
+      "text": [
+        "Under a ledge they wait for the storm",
+        "to pass. Then they stroll to the gate."
+      ],
+      "next": "p11",
+      "prompt": "Finn and Zeb sit snug and dry under a rocky ledge while rain pours down in front of them; outside, a Triceratops shelters under a big tree; the storm is starting to clear with a patch of blue sky and a rainbow."
+    },
+    "p11": {
+      "id": "p11",
+      "img": "p11.webp",
+      "text": [
+        "Back in the Den, Finn sorts his notes.",
+        "Three horns, more to learn. Case cracked!"
+      ],
+      "next": null,
+      "prompt": "Back in the cosy explorer den, Finn pins a drawing of a Triceratops with its three horns onto the corkboard of case notes beside the big fossil horn, while Zeb wears a toy Triceratops hat; the wall screen shows a big green tick."
+    }
+  },
+  "casefile": {
+    "title": "Triceratops",
+    "subtitle": "The name means three-horned face.",
+    "img": "case.webp",
+    "chips": [
+      "Plant eater",
+      "Three horns and a frill",
+      "Lived 66 million years ago"
+    ],
+    "facts": [
+      {
+        "text": "Triceratops was about 9 metres long. That is as long as a bus.",
+        "source": "https://www.nhm.ac.uk/discover/dino-directory/triceratops.html"
+      },
+      {
+        "text": "Each long horn could be about 1 metre long, nearly as long as Finn is tall.",
+        "source": "https://www.guinnessworldrecords.com/world-records/93291-longest-dinosaur-horns"
+      },
+      {
+        "text": "It had up to 160 teeth, about five times as many as a grown-up.",
+        "source": "https://tumblr.amnh.org/post/806564151526866944/its-fossil-friday-with-its-massive-horns-and/amp"
+      }
+    ],
+    "prompt": "A Creature Cases style fact file portrait of a Triceratops, a big gentle plant-eating dinosaur with two long brow horns, a short nose horn, a big bony frill and a parrot-like beak, standing proudly among ferns on a sunny prehistoric plain; clean, bright, centred, like a collector card illustration, no people."
+  },
+  "quiz": [
+    {
+      "level": 1,
+      "q": "Which picture shows the Triceratops?",
+      "options": [
+        {
+          "text": "The Triceratops",
+          "img": "p5"
+        },
+        {
+          "text": "The Time Gate",
+          "img": "p3"
+        },
+        {
+          "text": "The ferns",
+          "img": "p4"
+        }
+      ],
+      "answer": 0,
+      "hint": "p5",
+      "why": "The big one with three horns and a frill."
+    },
+    {
+      "level": 2,
+      "q": "How many horns did it have?",
+      "options": [
+        {
+          "text": "Three"
+        },
+        {
+          "text": "Two"
+        },
+        {
+          "text": "One"
+        }
+      ],
+      "answer": 0,
+      "hint": "p6",
+      "why": "Two long ones and a short one on its nose."
+    },
+    {
+      "level": 3,
+      "q": "Why did the two Triceratops push with their horns?",
+      "options": [
+        {
+          "text": "It was a test of force, not a fight"
+        },
+        {
+          "text": "They were hungry"
+        },
+        {
+          "text": "They were cold"
+        }
+      ],
+      "answer": 0,
+      "hint": "p9",
+      "why": "A pushing contest. Then one got bored and trotted off."
+    },
+    {
+      "level": 4,
+      "q": "Why might a Triceratops need big horns and a frill?",
+      "options": [
+        {
+          "text": "To show off and to push"
+        },
+        {
+          "text": "To dig for food"
+        },
+        {
+          "text": "To help it swim"
+        }
+      ],
+      "answer": 0,
+      "hint": "p10",
+      "why": "Showing off, and pushing contests."
+    }
+  ],
+  "debrief": {
+    "question": "If you had horns like a Triceratops, what would you use them for?"
+  },
+  "patch": {
+    "name": "Three Horns",
+    "icon": "dino"
+  }
+}

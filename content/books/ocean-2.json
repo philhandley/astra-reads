@@ -1,0 +1,421 @@
+{
+  "id": "ocean-2",
+  "theme": "ocean",
+  "chapter": 2,
+  "title": "The Huge Blue",
+  "blurb": "A boat crew hears a deep, low tune in the sea. Finn and Zeb sail out to find the singer.",
+  "cover": "cover.webp",
+  "cover_prompt": "Finn and Zeb, in bright life jackets, lean over the side of a small white and orange boat on a sparkling blue sea, gasping with delight as a huge blue whale rises beside the boat and blows a tall spout of spray into the sunny sky.",
+  "outfits": [
+    ", wearing a blue wetsuit with a bright orange life jacket",
+    ", wearing a yellow wetsuit with a bright orange life jacket and a dive mask pushed up on his forehead"
+  ],
+  "sound": {
+    "phoneme": "oo",
+    "label": "/oo/",
+    "say": "oo, as in blue",
+    "spellings": [
+      "ue",
+      "ew",
+      "u-e"
+    ],
+    "examples": {
+      "ue": "blue",
+      "ew": "crew",
+      "u-e": "tune"
+    },
+    "intro": "Listen for the /oo/ sound, as in blue. In this story it is spelt three ways. Tap a word to hear it."
+  },
+  "tricky": [
+    "they",
+    "who",
+    "two",
+    "one",
+    "once",
+    "there",
+    "water",
+    "should",
+    "would",
+    "people",
+    "what"
+  ],
+  "words": {
+    "den": "d|e|n",
+    "ping": "p|i|ng",
+    "calf": "c|al|f",
+    "mic": "m|i|c",
+    "krill": "k|r|i|ll",
+    "motor": "m|o|t|or",
+    "secret": "s|e|c|r|e|t",
+    "whales": "wh|a_e|l|s",
+    "whale": "wh|a_e|l",
+    "listen": "l|i|st|e|n"
+  },
+  "start": "p1",
+  "cracked": "The deep tune was a blue whale singing. Finn and Zeb cracked the case!",
+  "pages": {
+    "p1": {
+      "id": "p1",
+      "img": "p01.webp",
+      "text": [
+        "Finn and Zeb are in the Den. Ping!",
+        "A new case: a deep tune in the sea."
+      ],
+      "next": "p2",
+      "prompt": "Inside the cosy explorer den full of maps and shells, the wall screen shows a sound wave line and a picture of the deep blue sea with a flashing light; Finn holds up a pair of headphones, Zeb cups his ears, both excited."
+    },
+    "p2": {
+      "id": "p2",
+      "img": "p02.webp",
+      "text": [
+        "A boat crew drops a mic into the sea.",
+        "They hear a huge, low tune. Who is it?"
+      ],
+      "next": "p3",
+      "prompt": "On a small fishing boat at sea, two friendly crew members in yellow oilskins lower an underwater microphone on a cable into the water and listen on headphones with puzzled smiles; seen on the den's wall screen, Finn and Zeb watching it."
+    },
+    "p3": {
+      "id": "p3",
+      "img": "p03.webp",
+      "text": [
+        "The crew picks up Finn and Zeb.",
+        "Blue sky, blue sea. Off they zoom!"
+      ],
+      "next": "p4",
+      "prompt": "A small white and orange boat zooms across a sparkling blue sea under a bright blue sky, a friendly crew member at the wheel; Finn and Zeb in life jackets stand at the front with the wind in their hair, cheering."
+    },
+    "p4": {
+      "id": "p4",
+      "img": "p04.webp",
+      "text": [
+        "Finn drops the mic in. Hush, they listen.",
+        "A long, low tune! It is very close."
+      ],
+      "next": "c1",
+      "prompt": "On the boat, Finn lowers an underwater microphone on a cable over the side while Zeb wears big headphones, eyes wide and mouth open, hearing a deep sound; curvy sound-wave lines rise gently from the water."
+    },
+    "c1": {
+      "id": "c1",
+      "img": "c01.webp",
+      "text": [
+        "A few birds dive to the east. The tune",
+        "comes from the deep. Which way, Finn?"
+      ],
+      "choice": {
+        "kind": "way",
+        "options": [
+          {
+            "label": "Follow the birds",
+            "icon": "sun",
+            "next": "b1a"
+          },
+          {
+            "label": "Follow the tune",
+            "icon": "ear",
+            "next": "b1b"
+          }
+        ]
+      },
+      "prompt": "From the boat, on one side a few seabirds dive into the sea far away, on the other side the open deep blue sea stretches out with gentle sound-wave lines rising from it; Finn points at the birds, Zeb holds the headphones and points out to sea."
+    },
+    "b1a": {
+      "id": "b1a",
+      "img": "b1a.webp",
+      "text": [
+        "The birds dive into a pink patch of",
+        "krill. A huge crowd of tiny shrimps!"
+      ],
+      "next": "p5",
+      "prompt": "Seabirds dive into a big pink patch in the sea; a close-up circle shows it is a swarm of tiny pink shrimp-like krill; Finn and Zeb lean over the side of the boat looking down at the pink water, amazed."
+    },
+    "b1b": {
+      "id": "b1b",
+      "img": "b1b.webp",
+      "text": [
+        "They follow the tune out to the deep blue.",
+        "The mic hums. The tune gets louder!"
+      ],
+      "next": "p5",
+      "prompt": "The little boat heads out into the deep blue sea, Zeb wearing headphones with a huge grin as the sound-wave lines get bigger, Finn steering towards them."
+    },
+    "p5": {
+      "id": "p5",
+      "img": "p05.webp",
+      "text": [
+        "Then, whoosh! A huge spout of spray,",
+        "as tall as a house. A blue whale!"
+      ],
+      "next": "p6",
+      "prompt": "Beside the little boat, a blue whale surfaces and blows a tall column of misty spray high into the air, as tall as a house; Finn and Zeb gasp and hold on to the rail, delighted."
+    },
+    "p6": {
+      "id": "p6",
+      "img": "p06.webp",
+      "text": [
+        "It is huge, longer than two buses!",
+        "The biggest animal there has ever been."
+      ],
+      "next": "p7",
+      "prompt": "A view from above the sea shows a huge blue-grey blue whale swimming just under the surface beside the small boat, the whale far longer than the boat; a picture-book comparison of two red buses drawn beside it shows its size; Finn and Zeb wave from the boat."
+    },
+    "p7": {
+      "id": "p7",
+      "img": "p07.webp",
+      "text": [
+        "It opens its huge mouth and gulps",
+        "up the krill. Then it spits out the water."
+      ],
+      "next": "p8",
+      "prompt": "Underwater view: the blue whale opens its enormous mouth wide, throat pleats stretching, gulping a big pink cloud of tiny krill; bubbles everywhere; the little boat's hull is above."
+    },
+    "p8": {
+      "id": "p8",
+      "img": "p08.webp",
+      "text": [
+        "A calf swims up to the boat! Finn turns",
+        "the motor off. The calf is so cute."
+      ],
+      "next": "c2",
+      "prompt": "A baby blue whale calf swims up close to the side of the little boat and peeks up curiously; Finn turns the boat's motor key to off, Zeb leans over to look, both smiling; the calf's mother is not far behind."
+    },
+    "c2": {
+      "id": "c2",
+      "img": "c02.webp",
+      "text": [
+        "Other boats would love to see the",
+        "whales. Should the crew tell them?"
+      ],
+      "choice": {
+        "kind": "big",
+        "options": [
+          {
+            "label": "Tell all the boats",
+            "icon": "ear",
+            "next": "b2a"
+          },
+          {
+            "label": "Keep it a secret",
+            "icon": "heart",
+            "next": "b2b"
+          },
+          {
+            "label": "Tell just one boat",
+            "icon": "bulb",
+            "next": "b2c"
+          }
+        ],
+        "reveal": {
+          "text": "Whale watching helps people love whales and want to keep them safe. But lots of boats can upset them. So good crews go slowly, keep far back, never chase, and do not stay too long. Experts weigh this up. What would you do?",
+          "source": "https://www.thanetcoast.org.uk/thanet-coastal-codes/marine-wildlife-watching-code/"
+        }
+      },
+      "prompt": "On the boat, a crew member holds a radio, ready to call; far away on the horizon several other small boats can be seen; the whale mother and calf rest in the water nearby; Finn and Zeb look at each other, thinking."
+    },
+    "b2a": {
+      "id": "b2a",
+      "img": "b2a.webp",
+      "text": [
+        "Finn tells the boats. They come slowly,",
+        "and lots of people see the huge blue."
+      ],
+      "next": "p9",
+      "reveal": "c2",
+      "prompt": "Several boats wait slowly and patiently at a distance while the blue whale spouts; people on the boats point and smile, children with binoculars; Finn and Zeb on their boat in front."
+    },
+    "b2b": {
+      "id": "b2b",
+      "img": "b2b.webp",
+      "text": [
+        "They keep it a secret. Just the crew,",
+        "the whales and the blue sea."
+      ],
+      "next": "p9",
+      "reveal": "c2",
+      "prompt": "A calm, peaceful scene: only the little boat on the wide blue sea, with the blue whale mother and calf swimming gently nearby; Finn puts a finger to his lips, Zeb smiles."
+    },
+    "b2c": {
+      "id": "b2c",
+      "img": "b2c.webp",
+      "text": [
+        "Finn tells just one boat. It comes",
+        "slowly and keeps far back. Nice crew!"
+      ],
+      "next": "p9",
+      "reveal": "c2",
+      "prompt": "One other small boat full of children waits far back, its crew waving, while the blue whale spouts between the two boats; Finn waves back from his boat with Zeb."
+    },
+    "p9": {
+      "id": "p9",
+      "img": "p09.webp",
+      "text": [
+        "The whale sings its tune once more.",
+        "It can be heard far, far across the sea."
+      ],
+      "next": "c3",
+      "prompt": "Underwater, the blue whale glides through the deep blue sea, with big gentle sound-wave rings spreading out from it far across the ocean; the tiny boat floats on the sunny surface above."
+    },
+    "c3": {
+      "id": "c3",
+      "img": "c03.webp",
+      "text": [
+        "Time to go back. Zeb wants to see one",
+        "last spout. Wait, or go?"
+      ],
+      "choice": {
+        "kind": "way",
+        "options": [
+          {
+            "label": "Wait for one last spout",
+            "icon": "clock",
+            "next": "b3a"
+          },
+          {
+            "label": "Head back to shore",
+            "icon": "back",
+            "next": "b3b"
+          }
+        ]
+      },
+      "prompt": "Late afternoon light on the sea; the boat's crew points back towards a distant harbour on the shore, while Zeb kneels on the deck looking hopefully out to sea where the whales are; Finn stands between them."
+    },
+    "b3a": {
+      "id": "b3a",
+      "img": "b3a.webp",
+      "text": [
+        "They wait. Whoosh! A last spout, and the",
+        "huge tail lifts up. So long, blue whale!"
+      ],
+      "next": "p10",
+      "prompt": "The blue whale's huge tail flukes lift up out of the sea, dripping water, as it dives in golden evening light; Finn and Zeb wave goodbye from the boat."
+    },
+    "b3b": {
+      "id": "b3b",
+      "img": "b3b.webp",
+      "text": [
+        "They head back to shore. The crew",
+        "see the spout far off. So long, huge blue!"
+      ],
+      "next": "p10",
+      "prompt": "The little boat heads back towards a harbour with a lighthouse at sunset; far behind on the sea a tiny spout of spray rises from the whale; Finn and Zeb look back and wave."
+    },
+    "p10": {
+      "id": "p10",
+      "img": "p10.webp",
+      "text": [
+        "Back in the Den, Finn plays the tune.",
+        "A blue whale song! Case cracked!"
+      ],
+      "next": null,
+      "prompt": "Back in the cosy explorer den, Finn presses play on a speaker while the wall screen shows the blue whale and a sound wave with a big green tick; Zeb lies on the rug with his eyes closed, swaying to the whale song."
+    }
+  },
+  "casefile": {
+    "title": "Blue whale",
+    "subtitle": "The biggest animal there has ever been.",
+    "img": "case.webp",
+    "chips": [
+      "Biggest animal ever",
+      "Eats tiny krill",
+      "Sings deep tunes"
+    ],
+    "facts": [
+      {
+        "text": "A blue whale can be up to 30 metres long. That is as long as three buses.",
+        "source": "https://www.countryfile.com/go-outdoors/days-out/blue-whale-arrives-at-natural-history-museum"
+      },
+      {
+        "text": "The biggest blue whales can eat up to 6 tonnes of krill in a day. That is as heavy as a big elephant.",
+        "source": "https://www.fisheries.noaa.gov/species/blue-whale"
+      },
+      {
+        "text": "Other whales can hear a blue whale's call 1,600 km away. That is further than from London to Rome!",
+        "source": "https://www.fisheries.noaa.gov/species/blue-whale"
+      }
+    ],
+    "prompt": "A Creature Cases style fact file portrait of a blue whale gliding through clear blue ocean water, long and streamlined, blue-grey with pale mottles, with a small calf beside it and a cloud of tiny pink krill ahead; clean, bright, centred, like a collector card illustration, no people, no boats."
+  },
+  "quiz": [
+    {
+      "level": 1,
+      "q": "Which picture shows the whale's spout?",
+      "options": [
+        {
+          "text": "The spout",
+          "img": "p5"
+        },
+        {
+          "text": "The boat",
+          "img": "p3"
+        },
+        {
+          "text": "The mic",
+          "img": "p4"
+        }
+      ],
+      "answer": 0,
+      "hint": "p5",
+      "why": "Whoosh! As tall as a house."
+    },
+    {
+      "level": 2,
+      "q": "What does a blue whale eat?",
+      "options": [
+        {
+          "text": "Krill"
+        },
+        {
+          "text": "Big fish"
+        },
+        {
+          "text": "Seaweed"
+        }
+      ],
+      "answer": 0,
+      "hint": "p7",
+      "why": "Tiny shrimps called krill, lots and lots of them."
+    },
+    {
+      "level": 3,
+      "q": "Why did Finn turn the motor off?",
+      "options": [
+        {
+          "text": "So the calf was safe and calm"
+        },
+        {
+          "text": "The boat ran out"
+        },
+        {
+          "text": "So he could swim"
+        }
+      ],
+      "answer": 0,
+      "hint": "p8",
+      "why": "A quiet boat keeps whales calm."
+    },
+    {
+      "level": 4,
+      "q": "Why could the crew hear the whale from far away?",
+      "options": [
+        {
+          "text": "Its deep tune goes far in the sea"
+        },
+        {
+          "text": "The whale was by the boat"
+        },
+        {
+          "text": "The crew have big ears"
+        }
+      ],
+      "answer": 0,
+      "hint": "p9",
+      "why": "Whale tunes can be heard far, far across the sea."
+    }
+  ],
+  "debrief": {
+    "question": "Would you tell the other boats about the whales? Why?"
+  },
+  "patch": {
+    "name": "Huge Blue",
+    "icon": "water"
+  }
+}

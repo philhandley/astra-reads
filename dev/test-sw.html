@@ -16,7 +16,7 @@ try {
   const has = async u => !!(await c.match(new URL(u, location.href).href));
   log('cache', keys.join(','), 'entries', n,
     'shell', await has('../'), 'app', await has('../js/app.js'), 'story', await has('../js/story.js'),
-    'book', await has('../content/books/dino-1.json'), 'picture', await has('../assets/img/books/dino-1/p01.webp'),
+    'book', await has('../content/books/dino-1.json'), 'ch2', await has('../content/books/ocean-2.json'), 'ch2pic', await has('../assets/img/books/ocean-2/case.webp'), 'picture', await has('../assets/img/books/dino-1/p01.webp'),
     'icon', await has('../assets/icons/icon-192.png'),
     'fonts', await has('https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Lexend:wght@400;500;600;700;800&display=swap'));
 } catch (e) { log('ERROR', e.message); }

@@ -15,6 +15,17 @@ A shelf of **Explorer Cases**: interactive decodable stories in which Finn and Z
 
 Every chapter follows the Explorer Case formula (research/03): the Den, a ping (a call for help or a question nobody can answer), gear up and a vehicle, arrival, a which-way choice, meeting the creature or place, a Big Question with no right answer, the real feature of the creature or place helps, home and "Case cracked!", then the Case File (real facts), four comprehension questions, a debrief and a patch.
 
+### Chapter 2 (added 11 October 2026)
+
+| Theme | Chapter 2 | Sound | Case File |
+|---|---|---|---|
+| dino | The Three Horns (what were Triceratops horns for?) | /or/ or, aw, ore | Triceratops |
+| space | Round and Round (a black hole, seen from a safe distance) | /ow/ ou, ow | Sagittarius A* |
+| wild | The Fastest Bird (peregrines on a city church) | /ur/ ir, ur, ear | Peregrine falcon |
+| ocean | The Huge Blue (a deep tune in the sea) | /oo/ ue, ew, u-e | Blue whale |
+
+Facts for chapter 2 are in research/05 and research/06. The shelf shows one card per series with a chapter button for each chapter; it opens on the first unread chapter.
+
 ## 2. Reading rules (from the handwritten brief)
 
 - Level: Little Wandle Phase 5 (Oxford Reading Tree Phonics Level 5). Every word is decodable with Phase 2 to 5 grapheme-phoneme correspondences or is a Little Wandle tricky word (research/01). Names (Finn, Zeb, Mars) are allowed.

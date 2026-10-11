@@ -31,6 +31,8 @@ function topbar({ title = '', back = true } = {}) {
 }
 
 /* ---------------- Home: the shelf ---------------- */
+const shelfPick = {}; // theme id -> book id chosen with the chapter buttons (this visit only)
+
 function renderHome() {
   const v = h(`<section class="view"><div class="scroll" style="flex:1"><div class="home"></div></div></section>`);
   const bar = topbar({ back: false });
@@ -42,22 +44,37 @@ function renderHome() {
   v.prepend(bar);
   const home = v.querySelector('.home');
   for (const t of DATA.themes) {
-    const id = t.books[0];
-    const b = DATA.books[id];
-    if (!b) continue;
-    const done = store.isDone(id);
-    const total = t.chapters || 10;
-    const card = h(`<article class="shelf theme-${t.id}" role="button" tabindex="0">
+    const ids = t.books.filter(id => DATA.books[id]);
+    if (!ids.length) continue;
+    // Show the chosen chapter, else the first one not yet read, else the newest.
+    let pick = shelfPick[t.id] && ids.includes(shelfPick[t.id]) ? shelfPick[t.id] : (ids.find(id => !store.isDone(id)) || ids[ids.length - 1]);
+    const card = h(`<article class="shelf theme-${t.id}" role="button" tabindex="0"></article>`);
+    const draw = () => {
+      const b = DATA.books[pick];
+      const done = store.isDone(pick);
+      const total = ids.length;
+      card.innerHTML = `
       <div class="cover">${imgTag(b, b.cover, b.title)}${done ? `<span class="done">${icon('check')}</span>` : ''}</div>
       <div class="body">
-        <div class="series">${icon(t.icon)} ${esc(t.series)}</div>
+        <div class="series">${icon(t.icon)} ${esc(t.series)} <span class="chapno">Chapter ${b.chapter}</span></div>
         <h2>${esc(b.title)}</h2>
         <p class="blurb">${esc(b.blurb)}</p>
         <div class="foot"><span class="sound-badge"><span class="ph">${esc(b.sound.label)}</span><span class="sp">${b.sound.spellings.map(s => `<b>${esc(s)}</b>`).join(' ')}</span></span>
-          <span class="chapters" title="Chapter 1 of ${total}">${Array.from({ length: total }, (_, i) => `<i class="${i === 0 ? (done ? 'done' : 'on') : ''}"></i>`).join('')}</span></div>
-      </div></article>`);
-    card.addEventListener('click', () => { location.hash = `#/book/${id}`; });
-    card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); location.hash = `#/book/${id}`; } });
+          <span class="chapters" aria-label="Chapters">${Array.from({ length: total }, (_, i) => {
+            const id = ids[i];
+            if (!id) return `<i class="soon" title="Coming soon"></i>`;
+            const cls = [id === pick ? 'sel' : '', store.isDone(id) ? 'done' : ''].join(' ');
+            return `<button type="button" class="ch ${cls}" data-id="${esc(id)}" aria-label="Chapter ${i + 1}${store.isDone(id) ? ', read' : ''}">${store.isDone(id) && id !== pick ? icon('check') : i + 1}</button>`;
+          }).join('')}</span></div>
+      </div>`;
+      card.querySelectorAll('.ch').forEach(btn => btn.addEventListener('click', e => {
+        e.stopPropagation();
+        pick = btn.dataset.id; shelfPick[t.id] = pick; draw();
+      }));
+    };
+    draw();
+    card.addEventListener('click', () => { location.hash = `#/book/${pick}`; });
+    card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); location.hash = `#/book/${pick}`; } });
     home.appendChild(card);
   }
   mount(v);
@@ -66,7 +83,7 @@ function renderHome() {
 
 function showHello() {
   const box = h(`<div class="col gap"><div class="eyebrow" style="color:var(--accent)">Welcome</div><h2>Hello, Finn and Zeb!</h2>
-    <p style="font-size:21px">Four Explorer Cases are on the shelf. Finn reads the pages. Everyone talks about the choices. The Commander taps.</p>
+    <p style="font-size:21px">Four series of Explorer Cases are on the shelf. Tap a number to pick a chapter. Finn reads the pages. Everyone talks about the choices. The Commander taps.</p>
     <p class="muted">Tap any word to hear it and see its sound buttons. The speaker button reads a page out after you have had a go.</p>
     <div class="row" style="justify-content:flex-end"><button class="btn accent big" type="button">Let's go</button></div></div>`);
   const m = modal(box, { onClose: () => store.set({ hello: true }) });

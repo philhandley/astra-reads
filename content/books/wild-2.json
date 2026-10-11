@@ -1,0 +1,427 @@
+{
+  "id": "wild-2",
+  "theme": "wild",
+  "chapter": 2,
+  "title": "The Fastest Bird",
+  "blurb": "Which bird is the fastest on Earth? Finn and Zeb climb a church tower in the city to find out.",
+  "cover": "cover.webp",
+  "cover_prompt": "Finn and Zeb stand on the top of an old stone church tower above a city, Zeb holding up his camera and Finn holding binoculars, as a peregrine falcon with a dark head and pale speckled chest dives past them like a dart through the blue sky.",
+  "outfits": [
+    ", wearing a khaki explorer shirt and shorts and a green safari hat, with binoculars round his neck",
+    ", wearing the same khaki explorer outfit and green safari hat, with a camera on a strap round his neck"
+  ],
+  "sound": {
+    "phoneme": "ur",
+    "label": "/ur/",
+    "say": "ur, as in bird",
+    "spellings": [
+      "ir",
+      "ur",
+      "ear"
+    ],
+    "examples": {
+      "ir": "bird",
+      "ur": "turn",
+      "ear": "earth"
+    },
+    "intro": "Listen for the /ur/ sound, as in bird. In this story it is spelt three ways. Tap a word to hear it."
+  },
+  "tricky": [
+    "they",
+    "her",
+    "people",
+    "what",
+    "one",
+    "two",
+    "eyes",
+    "says"
+  ],
+  "words": {
+    "den": "d|e|n",
+    "ping": "p|i|ng",
+    "helmet": "h|e|l|m|e|t",
+    "scatters": "s|c|a|tt|er|s",
+    "telescope": "t|e|l|e|s|c|o_e|p",
+    "camera": "c|a|m|er|a",
+    "motorway": "m|o|t|or|w|ay",
+    "notebook": "n|o_e|t|b|oo|k",
+    "lets": "l|e|t|s"
+  },
+  "start": "p1",
+  "cracked": "The peregrine falcon is the fastest bird on Earth. Finn and Zeb cracked the case!",
+  "pages": {
+    "p1": {
+      "id": "p1",
+      "img": "p01.webp",
+      "text": [
+        "Finn and Zeb are in the Den. Ping!",
+        "Which bird is the fastest on Earth?"
+      ],
+      "next": "p2",
+      "prompt": "Inside the cosy explorer den, the wall screen flashes with a picture of a bird shape zooming past with speed lines; Finn grabs his binoculars and Zeb grabs his camera, both excited."
+    },
+    "p2": {
+      "id": "p2",
+      "img": "p02.webp",
+      "text": [
+        "A ranger sends a clue: a bird that nests",
+        "on a church in the city. Let's search!"
+      ],
+      "next": "p3",
+      "prompt": "Finn and Zeb look at the den wall screen, which shows a friendly ranger in a green fleece standing in front of a tall old stone church tower in a city, pointing up at a nest on a ledge; Finn reads his map, Zeb jumps with excitement."
+    },
+    "p3": {
+      "id": "p3",
+      "img": "p03.webp",
+      "text": [
+        "They get to the church first thing.",
+        "Its tower is as tall as ten houses!"
+      ],
+      "next": "p4",
+      "prompt": "Early morning in a busy city: Finn and Zeb stand at the bottom of a huge old stone church tower with pointed windows and a tall spire, craning their necks to look all the way up; pigeons on the steps, red buses passing."
+    },
+    "p4": {
+      "id": "p4",
+      "img": "p04.webp",
+      "text": [
+        "The ranger sets up a big telescope.",
+        "Look! A bird on the third ledge up."
+      ],
+      "next": "p5",
+      "prompt": "A friendly ranger in a green fleece sets up a big telescope on a tripod in a churchyard and Finn looks through it while Zeb points up at a small bird sitting on a high stone ledge of the church tower."
+    },
+    "p5": {
+      "id": "p5",
+      "img": "p05.webp",
+      "text": [
+        "It has a dark head, like a helmet,",
+        "and a pale chest. It is a girl falcon."
+      ],
+      "next": "c1",
+      "prompt": "Close view, as if seen through a telescope, of a peregrine falcon perched on a stone ledge of a church tower: dark slate-grey head like a helmet, yellow around the eye and beak, pale chest with fine dark bars; a round telescope-view edge is NOT drawn, the picture fills the frame."
+    },
+    "c1": {
+      "id": "c1",
+      "img": "c01.webp",
+      "text": [
+        "Do they go up the tower stairs, or",
+        "stay and watch from the church yard?"
+      ],
+      "choice": {
+        "kind": "way",
+        "options": [
+          {
+            "label": "Up the tower stairs",
+            "icon": "up",
+            "next": "b1a"
+          },
+          {
+            "label": "Watch from the yard",
+            "icon": "eye",
+            "next": "b1b"
+          }
+        ]
+      },
+      "prompt": "At the foot of the old church tower, an open wooden door shows a spiral stone staircase going up, while a sunny churchyard with a bench and a telescope is on the other side; Finn points up the stairs, Zeb points at the bench."
+    },
+    "b1a": {
+      "id": "b1a",
+      "img": "b1a.webp",
+      "text": [
+        "Up they go, step after step. They burst",
+        "out at the top, puffing. What a sight!"
+      ],
+      "next": "p6",
+      "prompt": "Finn and Zeb burst out of a little door onto the top of the church tower, puffing and grinning, with the whole city spread out below them under a blue sky; the ranger follows behind."
+    },
+    "b1b": {
+      "id": "b1b",
+      "img": "b1b.webp",
+      "text": [
+        "They sit on a bench in the church yard.",
+        "Zeb spots a feather twirling down."
+      ],
+      "next": "p6",
+      "prompt": "Finn and Zeb sit on a wooden bench in a sunny churchyard with the tall tower behind them; Zeb reaches up to catch a single grey feather twirling down through the air, Finn watches through binoculars."
+    },
+    "p6": {
+      "id": "p6",
+      "img": "p06.webp",
+      "text": [
+        "Then she tips over and dives! She curls",
+        "her wings in, like a dart. Whoosh!"
+      ],
+      "next": "p7",
+      "prompt": "A peregrine falcon dives headfirst down past the church tower with its wings tucked in tight like a dart, speed lines streaming behind it, against a bright blue sky; Finn and Zeb watch with mouths open."
+    },
+    "p7": {
+      "id": "p7",
+      "img": "p07.webp",
+      "text": [
+        "She is faster than a car on a motorway.",
+        "No bird on Earth can dive faster!"
+      ],
+      "next": "p8",
+      "prompt": "A fun picture-book comparison: the diving peregrine falcon zooms past a red car on a motorway far below and is clearly much faster, with long speed lines; Finn and Zeb cheer from the tower top."
+    },
+    "p8": {
+      "id": "p8",
+      "img": "p08.webp",
+      "text": [
+        "A flock of birds scatters. Swirl!",
+        "She misses, and turns back up. Whew!"
+      ],
+      "next": "p9",
+      "prompt": "A flock of grey pigeons scatters in a swirl over the city rooftops, all of them safe, while the peregrine falcon swoops past them and curves back up into the sky; Zeb laughs with relief, Finn points."
+    },
+    "p9": {
+      "id": "p9",
+      "img": "p09.webp",
+      "text": [
+        "She lands back on her ledge. Chirp, chirp!",
+        "Three fluffy chicks peep out of the nest."
+      ],
+      "next": "c2",
+      "prompt": "On a high stone ledge of the church tower, the peregrine falcon lands beside a nest with three fluffy white chicks with big dark eyes, beaks open, peeping; seen from close by, a sunny city behind."
+    },
+    "c2": {
+      "id": "c2",
+      "img": "c02.webp",
+      "text": [
+        "The church wants a camera on the nest so",
+        "people can watch. What do you think?"
+      ],
+      "choice": {
+        "kind": "big",
+        "options": [
+          {
+            "label": "A camera for everyone",
+            "icon": "camera",
+            "next": "b2a"
+          },
+          {
+            "label": "Leave the birds in peace",
+            "icon": "heart",
+            "next": "b2b"
+          },
+          {
+            "label": "Watch from far away",
+            "icon": "eye",
+            "next": "b2c"
+          }
+        ],
+        "reveal": {
+          "text": "Lots of cathedrals do put cameras by falcon nests, so people all over can watch the chicks grow. Others say: give the birds peace, and watch from far away with a telescope. By law, nobody may disturb a falcon nest. What do you think?",
+          "source": "https://englishcathedrals.co.uk/latest-news/updated-cathedral-peregrine-webcams/"
+        }
+      },
+      "prompt": "In the churchyard, the friendly ranger holds up a small nest camera while Finn and Zeb look up at the high ledge where the falcon family sits; Finn rubs his chin thinking, Zeb looks from the camera to the nest."
+    },
+    "b2a": {
+      "id": "b2a",
+      "img": "b2a.webp",
+      "text": [
+        "A small camera goes up by the nest.",
+        "Now people all over can see the birds!"
+      ],
+      "next": "p10",
+      "reveal": "c2",
+      "prompt": "A screen in the church shows a live picture of the three fluffy falcon chicks from a small camera on the ledge, and a happy crowd of children and grown-ups gathers round to watch; Finn and Zeb at the front, smiling."
+    },
+    "b2b": {
+      "id": "b2b",
+      "img": "b2b.webp",
+      "text": [
+        "They leave the birds in peace.",
+        "The chicks curl up and snooze."
+      ],
+      "next": "p10",
+      "reveal": "c2",
+      "prompt": "Up on the quiet ledge, three fluffy white falcon chicks curl up together and snooze under their mother's wing; far below in the churchyard Finn and Zeb walk away quietly on tiptoe, smiling."
+    },
+    "b2c": {
+      "id": "b2c",
+      "img": "b2c.webp",
+      "text": [
+        "They watch from far with the telescope.",
+        "Zeb sees the first chick flap its wings!"
+      ],
+      "next": "p10",
+      "reveal": "c2",
+      "prompt": "Zeb looks through the big telescope on its tripod in the churchyard, gasping with delight; an inset of the view shows the first fluffy falcon chick flapping its little wings on the high ledge; Finn gives a thumbs up."
+    },
+    "p10": {
+      "id": "p10",
+      "img": "p10.webp",
+      "text": [
+        "Finn writes in his notebook: fastest",
+        "bird on Earth, nests on churches."
+      ],
+      "next": "c3",
+      "prompt": "Finn sits on the churchyard wall writing in his notebook, which shows a simple drawing of a diving falcon and a church tower with a tick; Zeb sits beside him looking at the photos on his camera."
+    },
+    "c3": {
+      "id": "c3",
+      "img": "c03.webp",
+      "text": [
+        "The sun sets. Get the train home first,",
+        "or stay to see her last flight?"
+      ],
+      "choice": {
+        "kind": "way",
+        "options": [
+          {
+            "label": "Get the train home",
+            "icon": "run",
+            "next": "b3a"
+          },
+          {
+            "label": "Stay for one last flight",
+            "icon": "eye",
+            "next": "b3b"
+          }
+        ]
+      },
+      "prompt": "Sunset over the city, the church tower glowing orange; on one side the lights of a train station, on the other the falcon perched on the tower ready to fly; Finn looks at his watch, Zeb points up at the falcon."
+    },
+    "b3a": {
+      "id": "b3a",
+      "img": "b3a.webp",
+      "text": [
+        "On the train, Zeb curls up and snores.",
+        "Finn draws the falcon diving. Whoosh!"
+      ],
+      "next": "p11",
+      "prompt": "Inside a cosy train carriage at dusk, Zeb is curled up asleep on the seat with his camera, while Finn draws a diving falcon in his notebook; city lights pass by the window."
+    },
+    "b3b": {
+      "id": "b3b",
+      "img": "b3b.webp",
+      "text": [
+        "She swirls up high, then turns and dives",
+        "one last time, a dark dart in the sky."
+      ],
+      "next": "p11",
+      "prompt": "At sunset the peregrine falcon swirls high above the glowing church tower and then dives like a dark dart across an orange and pink sky; Finn and Zeb watch from the churchyard, silhouetted, arms up in delight."
+    },
+    "p11": {
+      "id": "p11",
+      "img": "p11.webp",
+      "text": [
+        "Back in the Den, Finn pins up the bird.",
+        "Fastest on Earth! Case cracked!"
+      ],
+      "next": null,
+      "prompt": "Back in the cosy explorer den, Finn pins a drawing of a diving peregrine falcon onto the corkboard of case notes while Zeb holds out his arms like wings, pretending to dive; the wall screen shows a big green tick."
+    }
+  },
+  "casefile": {
+    "title": "Peregrine falcon",
+    "subtitle": "The fastest bird on Earth.",
+    "img": "case.webp",
+    "chips": [
+      "Fastest dive",
+      "Nests on cliffs and churches",
+      "Deadly hunter"
+    ],
+    "facts": [
+      {
+        "text": "A peregrine can dive at 320 km an hour. That is about three times as fast as a car on a motorway.",
+        "source": "https://guinnessworldrecords.com/world-records/70929-fastest-bird-diving"
+      },
+      {
+        "text": "Peregrines nest on sea cliffs. Now some nest on tall buildings in towns, like cathedrals.",
+        "source": "https://www.rspb.org.uk/birds-and-wildlife/peregrine-falcon"
+      },
+      {
+        "text": "In 1961 there were only 385 pairs in the UK. Now there are lots more!",
+        "source": "https://bto.org/about-birds/bird-of-month/peregrine"
+      }
+    ],
+    "prompt": "A Creature Cases style fact file portrait of a peregrine falcon perched proudly on a stone ledge, dark slate-grey head like a helmet, yellow eye-ring and feet, pale chest with fine bars, wings slightly open, with a sea cliff and a church tower in the background; clean, bright, centred, like a collector card illustration, no people."
+  },
+  "quiz": [
+    {
+      "level": 1,
+      "q": "Which picture shows the falcon diving?",
+      "options": [
+        {
+          "text": "Diving",
+          "img": "p6"
+        },
+        {
+          "text": "The church",
+          "img": "p3"
+        },
+        {
+          "text": "The chicks",
+          "img": "p9"
+        }
+      ],
+      "answer": 0,
+      "hint": "p6",
+      "why": "Wings curled in, like a dart."
+    },
+    {
+      "level": 2,
+      "q": "Where was the falcon's nest?",
+      "options": [
+        {
+          "text": "On a church tower"
+        },
+        {
+          "text": "In a tree"
+        },
+        {
+          "text": "On the ground"
+        }
+      ],
+      "answer": 0,
+      "hint": "p4",
+      "why": "On a ledge, high up on the church."
+    },
+    {
+      "level": 3,
+      "q": "Why did she curl her wings in when she dived?",
+      "options": [
+        {
+          "text": "To go faster, like a dart"
+        },
+        {
+          "text": "To keep warm"
+        },
+        {
+          "text": "To hide from the boys"
+        }
+      ],
+      "answer": 0,
+      "hint": "p6",
+      "why": "Curled-in wings make her fast."
+    },
+    {
+      "level": 4,
+      "q": "Why do people keep away from a falcon nest?",
+      "options": [
+        {
+          "text": "So the birds are not upset"
+        },
+        {
+          "text": "Because the nest is messy"
+        },
+        {
+          "text": "Because falcons do not like chips"
+        }
+      ],
+      "answer": 0,
+      "hint": "c2",
+      "why": "The birds need peace to look after their chicks."
+    }
+  ],
+  "debrief": {
+    "question": "Would you put a camera on the nest? Why?"
+  },
+  "patch": {
+    "name": "Fastest Bird",
+    "icon": "bolt"
+  }
+}

@@ -1,0 +1,409 @@
+{
+  "id": "space-2",
+  "theme": "space",
+  "chapter": 2,
+  "title": "Round and Round",
+  "blurb": "Something dark sits in the middle of our galaxy. Finn and Zeb fly out to see a black hole, from a safe distance.",
+  "cover": "cover.webp",
+  "cover_prompt": "Finn and Zeb in white and orange spacesuits look out through the big round window of their white and orange spaceship at a black hole far away: a dark round shadow inside a glowing orange ring of light, with a swirl of stars and dust spinning round it.",
+  "sound": {
+    "phoneme": "ow",
+    "label": "/ow/",
+    "say": "ow, as in down",
+    "spellings": [
+      "ou",
+      "ow"
+    ],
+    "examples": {
+      "ou": "out",
+      "ow": "down"
+    },
+    "intro": "Listen for the /ow/ sound, as in down. In this story it is spelt two ways. Tap a word to hear it."
+  },
+  "tricky": [
+    "there",
+    "our",
+    "two",
+    "one",
+    "could",
+    "would",
+    "ask",
+    "says"
+  ],
+  "words": {
+    "den": "d|e|n",
+    "ping": "p|i|ng",
+    "galaxy": "g|a|l|a|x|y",
+    "telescope": "t|e|l|e|s|c|o_e|p",
+    "probe": "p|r|o_e|b",
+    "comet": "c|o|m|e|t",
+    "torches": "t|or|ch|e|s"
+  },
+  "start": "p1",
+  "cracked": "They found the black hole in the middle of our galaxy and took its picture. Finn and Zeb cracked the case!",
+  "pages": {
+    "p1": {
+      "id": "p1",
+      "img": "p01.webp",
+      "text": [
+        "Finn and Zeb are in the Den. Ping!",
+        "Now there is a new case. Wow!"
+      ],
+      "next": "p2",
+      "prompt": "Inside the cosy explorer den at night, a big wall screen flashes with a picture of a swirling spiral galaxy; Finn and Zeb, in their spacesuits without helmets, jump up from beanbags, excited."
+    },
+    "p2": {
+      "id": "p2",
+      "img": "p02.webp",
+      "text": [
+        "Something dark sits in the middle",
+        "of our galaxy. Can they find out how?"
+      ],
+      "next": "p3",
+      "prompt": "Finn and Zeb, in spacesuits without helmets, stand in front of a big wall screen in the den showing a spiral galaxy with a dark mysterious spot circled in the very middle; Finn points at the spot, Zeb scratches his head."
+    },
+    "p3": {
+      "id": "p3",
+      "img": "p03.webp",
+      "text": [
+        "Finn counts down: three, two, one...",
+        "Blast off! The ship zooms out."
+      ],
+      "next": "p4",
+      "prompt": "A sleek white and orange spaceship blasts off into a starry night sky on a column of flame and smoke; through its round cockpit window Finn holds up one finger counting down and Zeb cheers."
+    },
+    "p4": {
+      "id": "p4",
+      "img": "p04.webp",
+      "text": [
+        "Past the Moon, past Mars, out and out.",
+        "Space is silent. There is no sound."
+      ],
+      "next": "p5",
+      "prompt": "The white and orange spaceship glides silently past the grey Moon and the small red planet Mars in deep black space full of stars; inside the cockpit window Finn puts a finger to his lips going shh and Zeb cups his ear, hearing nothing."
+    },
+    "p5": {
+      "id": "p5",
+      "img": "p05.webp",
+      "text": [
+        "Stars all around! They float in big clouds.",
+        "The galaxy spins round and round."
+      ],
+      "next": "c1",
+      "prompt": "The little spaceship floats among huge glowing clouds of colourful stars, purple, pink and blue, with the spiral arms of the galaxy curving round and round in the distance; Finn and Zeb gaze out of the window in wonder."
+    },
+    "c1": {
+      "id": "c1",
+      "img": "c01.webp",
+      "text": [
+        "Two ways: a bright cloud of new stars,",
+        "or a dark, still way. Which way, Finn?"
+      ],
+      "choice": {
+        "kind": "way",
+        "options": [
+          {
+            "label": "Zoom into the star cloud",
+            "icon": "sparkle",
+            "next": "b1a"
+          },
+          {
+            "label": "Take the dark way",
+            "icon": "moon",
+            "next": "b1b"
+          }
+        ]
+      },
+      "prompt": "In deep space the spaceship faces two paths: on the left a bright glowing pink and blue cloud full of twinkling new stars, on the right a dark quiet path with just a few faint stars; Finn and Zeb point different ways from the cockpit window."
+    },
+    "b1a": {
+      "id": "b1a",
+      "img": "b1a.webp",
+      "text": [
+        "Inside the cloud, new stars glow",
+        "like a crowd of torches. Wow!"
+      ],
+      "next": "p6",
+      "prompt": "Inside a glowing nebula, the little spaceship flies past hundreds of bright baby stars twinkling like torches in pink and blue gas clouds; Finn and Zeb press their faces to the window, delighted."
+    },
+    "b1b": {
+      "id": "b1b",
+      "img": "b1b.webp",
+      "text": [
+        "The dark way is still. Finn turns the",
+        "lights down low. Shh. No sound at all."
+      ],
+      "next": "p6",
+      "prompt": "Inside the cosy dim cockpit of the spaceship, Finn turns a dial to dim the lights while Zeb whispers shh with a finger on his lips; through the window the dark quiet space has just a few faint stars."
+    },
+    "p6": {
+      "id": "p6",
+      "img": "p06.webp",
+      "text": [
+        "Then they see it, far out in front.",
+        "A black hole, with a ring of light round it."
+      ],
+      "next": "p7",
+      "prompt": "Far ahead of the little spaceship, a black hole: a perfectly dark round shadow surrounded by a glowing orange and gold ring of light, like a doughnut of fire, in deep starry space; Finn and Zeb stare out of the cockpit window in awe."
+    },
+    "p7": {
+      "id": "p7",
+      "img": "p07.webp",
+      "text": [
+        "Its pull is so strong that not even light",
+        "can get out. Not a thing. Not a sound."
+      ],
+      "next": "p8",
+      "prompt": "A simple picture-book diagram style scene: beams of light curving and bending round the black hole's glowing ring and falling into the dark middle; the spaceship stays safely far away, and Finn in the window holds up a hand like a stop sign while Zeb watches wide-eyed."
+    },
+    "p8": {
+      "id": "p8",
+      "img": "p08.webp",
+      "text": [
+        "Zeb points. A cloud of dust is spinning",
+        "round and round it, faster and faster."
+      ],
+      "next": "c2",
+      "prompt": "A swirling cloud of glowing dust and gas spins round and round the black hole like water going round a plughole, bright orange and pink; Zeb points at it from the cockpit window, Finn watches through a small telescope."
+    },
+    "c2": {
+      "id": "c2",
+      "img": "c02.webp",
+      "text": [
+        "Their probe could zoom down for a closer",
+        "look, but it could not come back. Now what?"
+      ],
+      "choice": {
+        "kind": "big",
+        "options": [
+          {
+            "label": "Send the probe down",
+            "icon": "down",
+            "next": "b2a"
+          },
+          {
+            "label": "Stay out here and look",
+            "icon": "eye",
+            "next": "b2b"
+          },
+          {
+            "label": "Ask the crew at home",
+            "icon": "bulb",
+            "next": "b2c"
+          }
+        ],
+        "reveal": {
+          "text": "Real scientists did not send anything there. They joined up eight telescopes around the world to make one as big as the Earth, and took the first picture in 2022. But a probe might find out new things too! What would you do?",
+          "source": "https://www.eso.org/public/news/eso2208/"
+        }
+      },
+      "prompt": "Inside the spaceship, a small round shiny probe with little antennae sits in a launch tube with a big button beside it; through the window the black hole's glowing ring waits far away; Finn's hand hovers over the button, thinking, while Zeb looks at a picture of Earth on a screen."
+    },
+    "b2a": {
+      "id": "b2a",
+      "img": "b2a.webp",
+      "text": [
+        "The probe zooms down, round and round.",
+        "It sends back one picture. So long, probe!"
+      ],
+      "next": "p9",
+      "reveal": "c2",
+      "prompt": "The small shiny probe spirals down towards the black hole's glowing ring, beaming a bright signal back to the spaceship; Finn and Zeb wave goodbye to it from the window, a little sad but excited."
+    },
+    "b2b": {
+      "id": "b2b",
+      "img": "b2b.webp",
+      "text": [
+        "They stay out here, safe and sound,",
+        "and look with the big telescope. Wow!"
+      ],
+      "next": "p9",
+      "reveal": "c2",
+      "prompt": "Finn and Zeb take turns looking through a big brass telescope inside the spaceship, aimed at the black hole's glowing ring far away; Zeb on tiptoe, Finn helping him, both amazed."
+    },
+    "b2c": {
+      "id": "b2c",
+      "img": "b2c.webp",
+      "text": [
+        "Finn calls home. The crew shout back:",
+        "Stay out there, and look with care!"
+      ],
+      "next": "p9",
+      "reveal": "c2",
+      "prompt": "Finn talks into a radio in the spaceship cockpit while a screen shows a friendly mission control team on Earth waving and giving thumbs up; Zeb waves at the screen."
+    },
+    "p9": {
+      "id": "p9",
+      "img": "p09.webp",
+      "text": [
+        "Finn takes a picture of the dark ring.",
+        "Now they know how it looks. Case cracked!"
+      ],
+      "next": "c3",
+      "prompt": "Finn holds up a camera to the cockpit window, and a glowing screen shows the picture he took: the black hole's dark round shadow inside an orange ring of light; Zeb gives two thumbs up."
+    },
+    "c3": {
+      "id": "c3",
+      "img": "c03.webp",
+      "text": [
+        "Time to go home. Fly the fast way,",
+        "or the long way round, past the stars?"
+      ],
+      "choice": {
+        "kind": "way",
+        "options": [
+          {
+            "label": "The fast way home",
+            "icon": "rocket",
+            "next": "b3a"
+          },
+          {
+            "label": "The long way round",
+            "icon": "sparkle",
+            "next": "b3b"
+          }
+        ]
+      },
+      "prompt": "The spaceship turns for home: on one side a straight bright path of light leading to a tiny blue Earth, on the other a curving path past a ringed planet and a comet with a sparkly tail; Finn points at the straight path, Zeb points at the comet."
+    },
+    "b3a": {
+      "id": "b3a",
+      "img": "b3a.webp",
+      "text": [
+        "Zoom! The ship shoots back down",
+        "to Earth in a flash."
+      ],
+      "next": "p10",
+      "prompt": "The white and orange spaceship zooms towards a big blue and green Earth in a streak of light, Finn and Zeb cheering through the window."
+    },
+    "b3b": {
+      "id": "b3b",
+      "img": "b3b.webp",
+      "text": [
+        "They loop round a planet with rings",
+        "and wave to a comet. Then home."
+      ],
+      "next": "p10",
+      "prompt": "The little spaceship loops round a beautiful ringed planet while a comet with a long glowing tail streaks past; Finn and Zeb wave at the comet from the window, laughing."
+    },
+    "p10": {
+      "id": "p10",
+      "img": "p10.webp",
+      "text": [
+        "Back in the Den, Finn pins up the",
+        "picture of the ring. Wow! Case cracked!"
+      ],
+      "next": null,
+      "prompt": "Back in the cosy explorer den at night, Finn pins a big printed picture of the black hole's glowing ring onto the corkboard of case notes, while Zeb spins round and round on the spot with his arms out; the wall screen shows the galaxy with a big green tick."
+    }
+  },
+  "casefile": {
+    "title": "The black hole in our galaxy",
+    "subtitle": "Its name is Sagittarius A star.",
+    "img": "case.webp",
+    "chips": [
+      "In the middle of our galaxy",
+      "Nothing gets out",
+      "First picture in 2022"
+    ],
+    "facts": [
+      {
+        "text": "It is about 4 million times as heavy as our Sun.",
+        "source": "https://www.eso.org/public/news/eso2208/"
+      },
+      {
+        "text": "It is so far away that its light takes 27,000 years to reach us.",
+        "source": "https://www.eso.org/public/news/eso2208/"
+      },
+      {
+        "text": "Its first picture came in 2022. Eight telescopes around the world worked together, like one telescope as big as the Earth.",
+        "source": "https://www.eso.org/public/news/eso1907/"
+      }
+    ],
+    "prompt": "A Creature Cases style fact file portrait of the black hole at the centre of the Milky Way: a dark round shadow inside a glowing orange and gold ring of light, with a swirl of stars and the spiral arms of the galaxy around it; clean, bright, centred, like a collector card illustration, no people, no spaceship."
+  },
+  "quiz": [
+    {
+      "level": 1,
+      "q": "Which picture shows the black hole?",
+      "options": [
+        {
+          "text": "The black hole",
+          "img": "p6"
+        },
+        {
+          "text": "Blast off",
+          "img": "p3"
+        },
+        {
+          "text": "Star clouds",
+          "img": "p5"
+        }
+      ],
+      "answer": 0,
+      "hint": "p6",
+      "why": "A dark round spot with a ring of light."
+    },
+    {
+      "level": 2,
+      "q": "What can you hear in space?",
+      "options": [
+        {
+          "text": "No sound at all"
+        },
+        {
+          "text": "Loud bangs"
+        },
+        {
+          "text": "Birds singing"
+        }
+      ],
+      "answer": 0,
+      "hint": "p4",
+      "why": "Space is silent."
+    },
+    {
+      "level": 3,
+      "q": "Why can nothing get out of a black hole?",
+      "options": [
+        {
+          "text": "Its pull is too strong"
+        },
+        {
+          "text": "It has a lid"
+        },
+        {
+          "text": "It is too far away"
+        }
+      ],
+      "answer": 0,
+      "hint": "p7",
+      "why": "Not even light can get out."
+    },
+    {
+      "level": 4,
+      "q": "Why would a probe that goes down to the black hole not come back?",
+      "options": [
+        {
+          "text": "The pull would not let it get out"
+        },
+        {
+          "text": "It would get lost in the stars"
+        },
+        {
+          "text": "It would want to stay"
+        }
+      ],
+      "answer": 0,
+      "hint": "p7",
+      "why": "Nothing gets out, not even light."
+    }
+  ],
+  "debrief": {
+    "question": "Would you send the probe down? Why, or why not?"
+  },
+  "patch": {
+    "name": "Round and Round",
+    "icon": "middle"
+  }
+}

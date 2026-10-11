@@ -40,6 +40,7 @@ const OVERRIDES = {
   babies: 'b|a|b|ie|s', only: 'o|n|l|y', open: 'o|p|e|n', over: 'o|v|er', cold: 'c|o|l|d', old: 'o|l|d', hold: 'h|o|l|d', both: 'b|o|th',
   most: 'm|o|s|t', gold: 'g|o|l|d', told: 't|o|l|d', paper: 'p|a|p|er', even: 'e|v|e|n', hello: 'h|e|ll|o', zero: 'z|er|o',
   seven: 's|e|v|e|n', eleven: 'e|l|e|v|e|n', metres: 'm|e|t|r|e|s', metre: 'm|e|t|r|e', ranger: 'r|a|n|g|er', dragon: 'd|r|a|g|o|n',
+  buses: 'b|u|s|e|s', bus: 'b|u|s', around: 'a|r|ou|n|d', parrot: 'p|a|rr|o|t', falcon: 'f|a|l|c|o|n', carrot: 'c|a|rr|o|t',
   sometimes: 's|o|me|t|i_e|m|s', someone: 's|o|me|o|ne', everyone: 'e|v|er|y|o|ne', nothing: 'n|o|th|i|ng', away: 'a|w|ay',
 };
 delete OVERRIDES.where_;
@@ -49,6 +50,13 @@ const EA_SHORT = new Set(['head', 'bread', 'ready', 'heavy', 'weather', 'feather
 const EA_AI = new Set(['great', 'break', 'steak', 'greater', 'breaks', 'breaking']);
 const OW_COW = new Set(['cow', 'now', 'how', 'down', 'town', 'brown', 'owl', 'crowd', 'flower', 'shower', 'tower', 'power', 'growl', 'howl', 'clown', 'frown', 'crown', 'gown', 'wow', 'allow', 'vowel', 'towel', 'bow', 'row', 'crowded', 'downstairs', 'flowers', 'owls', 'powerful', 'drown', 'prowl', 'scowl', 'fowl', 'vow', 'sow', 'plow', 'chow', 'pow', 'meow', 'somehow', 'anyhow', 'cows', 'towns', 'crowds', 'showers', 'towers', 'growls', 'howls', 'clowns']);
 const EY_AI = new Set(['they', 'grey', 'obey', 'prey', 'hey', 'survey', 'whey', 'greys']);
+// 'ou' that is not /ow/ (you, could, soup, shoulder...).
+const OU_NOT_OW = new Set(['you', 'your', 'yours', 'could', 'would', 'should', 'four', 'pour', 'tour', 'soup', 'group', 'groups', 'through', 'thought', 'touch', 'young', 'country', 'cousin', 'double', 'trouble', 'shoulder', 'shoulders', 'boulder', 'boulders', 'mould', 'youth', 'route', 'courage', 'enough', 'tough', 'rough', 'cough', 'though', 'dough', 'famous', 'nervous', 'enormous', 'dangerous']);
+// 'ear' that says /ur/ (learn, earth). Others say /ear/ (hear) or /air/ (bear).
+const EAR_UR = new Set(['learn', 'learns', 'learned', 'learnt', 'learning', 'early', 'earlier', 'earth', 'earn', 'earns', 'heard', 'search', 'searches', 'searched', 'pearl', 'pearls', 'yearn', 'rehearse']);
+const EAR_AIR = new Set(['bear', 'bears', 'pear', 'pears', 'wear', 'wears', 'tear', 'swear']);
+// 'or' that says /ur/ after w (work, word).
+const OR_UR = new Set(['work', 'works', 'worked', 'word', 'words', 'world', 'worlds', 'worm', 'worms', 'worse', 'worst', 'worth']);
 
 function splitDigraph(w) {
   // Finds a split digraph at the end of the word (allowing a trailing s or d). Returns { vowel, mid, suffix } or null.
@@ -78,6 +86,12 @@ function soundOf(g, w, atEnd) {
   if (g === 'ea') return EA_SHORT.has(lower) ? 'e' : EA_AI.has(lower) ? 'ai' : 'ee';
   if (g === 'ow') return OW_COW.has(lower) ? 'ow' : 'oa';
   if (g === 'ey') return EY_AI.has(lower) ? 'ai' : 'ee';
+  if (g === 'ou') return OU_NOT_OW.has(lower) ? 'other' : 'ow';
+  if (g === 'ear') return EAR_UR.has(lower) ? 'ur' : EAR_AIR.has(lower) ? 'air' : 'ear';
+  if (g === 'or') return OR_UR.has(lower) ? 'ur' : 'or';
+  if (g === 'ir' || g === 'ur') return 'ur';
+  if (g === 'aw' || g === 'ore' || g === 'au' || g === 'aur' || g === 'oar' || g === 'oor') return 'or';
+  if (g === 'ue' || g === 'ew' || g === 'u_e') return 'oo';
   if (g === 'ai' || g === 'ay' || g === 'a_e' || g === 'eigh' || g === 'aigh') return 'ai';
   if (g === 'ee' || g === 'e_e') return 'ee';
   if (g === 'igh' || g === 'i_e') return 'igh';
@@ -127,7 +141,7 @@ export function splitWord(word, overrides = {}) {
     const tryList = (list, n) => { for (const g of list) if (rest.startsWith(g) && i + g.length <= end) return g; return null; };
     hit = tryList(FOUR) || tryList(THREE);
     if (!hit && i === 0) hit = tryList(START_ONLY);
-    if (!hit) {
+    if (!hit && i > 0) {
       for (const g of END_ONLY) {
         if (rest.startsWith(g) && i + g.length <= end && END_REST.test(w.slice(i + g.length))) { hit = g; break; }
       }

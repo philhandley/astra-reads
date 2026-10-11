@@ -38,7 +38,7 @@ TAIL_COVER = 'Portrait-leaning composition with the brothers centred, book cover
 
 
 def briefs(book):
-    finn, zeb = OUTFITS[book['theme']]
+    finn, zeb = book.get('outfits') or OUTFITS[book['theme']]
     head = STYLE + BROTHERS.format(finn=finn, zeb=zeb)
     out = []
     if book.get('cover_prompt'):
