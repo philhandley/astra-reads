@@ -61,7 +61,7 @@ Every page has its own picture (one or two consecutive pages may share one), gen
 
 ## 5a. Picture status (11 October 2026)
 
-Ten pictures are in: the Dino Trail cover and its first eight pages (p01 to p04, c01, b1a, b1a2, b1b). The other 66 (the rest of the Dino Trail, and all of Night Flight, Deep in the Green and The Glow Below, including covers and Case File portraits) are still to be generated. Every one already has its brief in the book JSON; `python tools/prompts.py <book> --missing` prints them ready to paste. Until then those pages show a soft themed backdrop. Generation stopped because the Figma seat used for `generate_image` is a View seat (20 MCP calls a month); a Dev or Full seat allows 200 a day.
+Ten pictures are in: the Dino Trail cover and its first eight pages (p01 to p04, c01, b1a, b1a2, b1b). The other 66 (the rest of the Dino Trail, and all of Night Flight, Deep in the Green and The Glow Below, including covers and Case File portraits) are still to be generated. Every one already has its brief in the book JSON; `python tools/prompts.py <book> --missing` prints them ready to paste. Until then those pages show a soft themed backdrop. Generation stopped when Figma's `generate_image` returned "You have reached your usage limit" (the Starter team's AI allowance or the View seat's MCP allowance). Any generator works with the same briefs; describe the boys by appearance only, never by name.
 
 ## 6. Build order
 
