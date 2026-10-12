@@ -40,7 +40,7 @@ const OVERRIDES = {
   babies: 'b|a|b|ie|s', only: 'o|n|l|y', open: 'o|p|e|n', over: 'o|v|er', cold: 'c|o|l|d', old: 'o|l|d', hold: 'h|o|l|d', both: 'b|o|th',
   most: 'm|o|s|t', gold: 'g|o|l|d', told: 't|o|l|d', paper: 'p|a|p|er', even: 'e|v|e|n', hello: 'h|e|ll|o', zero: 'z|er|o',
   seven: 's|e|v|e|n', eleven: 'e|l|e|v|e|n', metres: 'm|e|t|r|e|s', metre: 'm|e|t|r|e', ranger: 'r|a|n|g|er', dragon: 'd|r|a|g|o|n',
-  buses: 'b|u|s|e|s', bus: 'b|u|s', around: 'a|r|ou|n|d', parrot: 'p|a|rr|o|t', falcon: 'f|a|l|c|o|n', carrot: 'c|a|rr|o|t',
+  calf: 'c|al|f', going: 'g|o|i|ng', doing: 'd|o|i|ng', halfway: 'h|al|f|w|ay', calm: 'c|al|m', waterfall: 'w|a|t|er|f|a|ll', everest: 'e|v|er|e|s|t', nepal: 'n|e|p|a|l', pasang: 'p|a|s|a|ng', sherpa: 'sh|er|p|a', gadget: 'g|a|dge|e|t', buses: 'b|u|s|e|s', bus: 'b|u|s', around: 'a|r|ou|n|d', parrot: 'p|a|rr|o|t', falcon: 'f|a|l|c|o|n', carrot: 'c|a|rr|o|t',
   sometimes: 's|o|me|t|i_e|m|s', someone: 's|o|me|o|ne', everyone: 'e|v|er|y|o|ne', nothing: 'n|o|th|i|ng', away: 'a|w|ay',
 };
 delete OVERRIDES.where_;
@@ -56,6 +56,8 @@ const OU_NOT_OW = new Set(['you', 'your', 'yours', 'could', 'would', 'should', '
 const EAR_UR = new Set(['learn', 'learns', 'learned', 'learnt', 'learning', 'early', 'earlier', 'earth', 'earn', 'earns', 'heard', 'search', 'searches', 'searched', 'pearl', 'pearls', 'yearn', 'rehearse']);
 const EAR_AIR = new Set(['bear', 'bears', 'pear', 'pears', 'wear', 'wears', 'tear', 'swear']);
 // 'or' that says /ur/ after w (work, word).
+const AL_AR = new Set(['half', 'halfway', 'halves', 'calm', 'calmly', 'palm', 'palms', 'calf', 'calves']);
+const AR_OR = new Set(['war', 'warm', 'warmer', 'warmly', 'warn', 'warns', 'swarm', 'wart', 'quarter', 'towards', 'toward', 'dwarf']);
 const OR_UR = new Set(['work', 'works', 'worked', 'word', 'words', 'world', 'worlds', 'worm', 'worms', 'worse', 'worst', 'worth']);
 
 function splitDigraph(w) {
@@ -89,6 +91,9 @@ function soundOf(g, w, atEnd) {
   if (g === 'ou') return OU_NOT_OW.has(lower) ? 'other' : 'ow';
   if (g === 'ear') return EAR_UR.has(lower) ? 'ur' : EAR_AIR.has(lower) ? 'air' : 'ear';
   if (g === 'or') return OR_UR.has(lower) ? 'ur' : 'or';
+  if (g === 'al') return AL_AR.has(lower) ? 'ar' : 'other';
+  if (g === 'ar') return AR_OR.has(lower) ? 'or' : 'ar';
+  if (g === 'air' || g === 'are') return 'air';
   if (g === 'ir' || g === 'ur') return 'ur';
   if (g === 'aw' || g === 'ore' || g === 'au' || g === 'aur' || g === 'oar' || g === 'oor') return 'or';
   if (g === 'ue' || g === 'ew' || g === 'u_e') return 'oo';

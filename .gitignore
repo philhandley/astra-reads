@@ -6,3 +6,5 @@ desktop.ini
 tools/shots/
 dev/test-*.html
 !dev/test-sw.html
+dev/voices/
+dev/voices.html

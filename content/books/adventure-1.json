@@ -1,0 +1,446 @@
+{
+  "id": "adventure-1",
+  "theme": "adventure",
+  "chapter": 1,
+  "title": "Top of the World",
+  "blurb": "Finn and Zeb trek across Nepal to climb Mount Everest, then make a big jump on the way home.",
+  "cover": "cover.webp",
+  "cover_prompt": "Finn and Zeb stand proudly on a snowy mountain ridge in the Himalayas with Mount Everest's huge snowy peak behind them under a deep blue sky, colourful prayer flags fluttering, and Pasang, their friendly Sherpa guide (a young man with short black hair, a warm smile, a bright orange and yellow down jacket and a red woolly hat), standing beside them giving a thumbs up.",
+  "sound": {
+    "phoneme": "ar",
+    "label": "/ar/",
+    "say": "ar, as in far",
+    "spellings": [
+      "ar",
+      "al"
+    ],
+    "examples": {
+      "ar": "far",
+      "al": "calm"
+    },
+    "intro": "Listen for the /ar/ sound, as in far. In this story it is spelt two ways. Tap a word to hear it."
+  },
+  "tricky": [
+    "they",
+    "are",
+    "one",
+    "two",
+    "what",
+    "should",
+    "says",
+    "her",
+    "waterfall"
+  ],
+  "words": {
+    "den": "d|e|n",
+    "ping": "p|i|ng",
+    "hooray": "h|oo|r|ay"
+  },
+  "start": "p1",
+  "cracked": "Finn and Zeb climbed to the top of the world, and made it safely home. Case cracked!",
+  "pages": {
+    "p1": {
+      "id": "p1",
+      "img": "p01.webp",
+      "text": [
+        "Finn and Zeb are in the Den. Ping!",
+        "The case: climb the highest peak. Start!"
+      ],
+      "next": "p2",
+      "prompt": "Inside the cosy explorer den full of maps and fossils, a big wall screen shows a huge snowy mountain peak with a little flag on top; Finn points at it excitedly and Zeb pulls on a woolly hat with a bobble."
+    },
+    "p2": {
+      "id": "p2",
+      "img": "p02.webp",
+      "text": [
+        "They fly far, far away to Nepal.",
+        "Hello, Nepal! The air smells of spice."
+      ],
+      "next": "p3",
+      "prompt": "A small plane lands on a short mountain airstrip in Nepal among green hills and snowy peaks; Finn and Zeb step out with their rucksacks, waving, colourful prayer flags strung between poles and friendly people nearby."
+    },
+    "p3": {
+      "id": "p3",
+      "img": "p03.webp",
+      "text": [
+        "They meet Pasang. He is a Sherpa and",
+        "knows the way. He is calm and strong."
+      ],
+      "next": "p4",
+      "prompt": "Finn and Zeb shake hands with Pasang, their friendly Sherpa mountain guide, a young man with short black hair, a warm smile, a bright orange and yellow down jacket and a red woolly hat; a shaggy yak stands behind him carrying bags, snowy peaks in the distance."
+    },
+    "p4": {
+      "id": "p4",
+      "img": "p04.webp",
+      "text": [
+        "The trek starts. They march up and",
+        "down hills, past yaks and prayer flags."
+      ],
+      "next": "p5",
+      "prompt": "Finn, Zeb and Pasang march along a winding stony mountain path up and down green hills, past a line of yaks carrying loads and strings of colourful prayer flags fluttering in the wind; tall snowy peaks ahead."
+    },
+    "p5": {
+      "id": "p5",
+      "img": "p05.webp",
+      "text": [
+        "Each day the path gets steep and hard.",
+        "At night the stars are so bright!"
+      ],
+      "next": "c1",
+      "prompt": "At night outside a cosy stone mountain lodge with glowing windows, Finn and Zeb, wrapped in blankets, gaze up at a sky packed with bright stars over the snowy peaks; Pasang points out a star."
+    },
+    "c1": {
+      "id": "c1",
+      "img": "c01.webp",
+      "text": [
+        "The path splits. Cross the swing bridge,",
+        "or go the long way round?"
+      ],
+      "choice": {
+        "kind": "way",
+        "options": [
+          {
+            "label": "Cross the swing bridge",
+            "icon": "rope",
+            "next": "b1a"
+          },
+          {
+            "label": "Go the long way round",
+            "icon": "mountain",
+            "next": "b1b"
+          }
+        ]
+      },
+      "prompt": "The mountain path splits: one way leads onto a long metal suspension bridge covered in prayer flags, high over a rushing river in a deep valley; the other way winds down into the green valley; Finn points at the bridge, Zeb points at the valley, Pasang waits."
+    },
+    "b1a": {
+      "id": "b1a",
+      "img": "b1a.webp",
+      "text": [
+        "The bridge sways far above the river.",
+        "Zeb holds on hard. It is fun!"
+      ],
+      "next": "p6",
+      "prompt": "Finn, Zeb and Pasang cross a long swaying suspension bridge with high safe mesh sides, covered in prayer flags, far above a rushing river; Zeb holds the side rail tightly and grins, Finn laughs."
+    },
+    "b1b": {
+      "id": "b1b",
+      "img": "b1b.webp",
+      "text": [
+        "Down in the valley, a yak and her calf",
+        "graze by a farm. Zeb pats the calf."
+      ],
+      "next": "p6",
+      "prompt": "In a green valley beside a little stone farmhouse, a shaggy mother yak and her fluffy baby yak calf graze; Zeb gently pats the calf's head while Finn and Pasang smile."
+    },
+    "p6": {
+      "id": "p6",
+      "img": "p06.webp",
+      "text": [
+        "At Base Camp the tents are bright dots.",
+        "It is cold! Zeb puts on a thick scarf."
+      ],
+      "next": "p7",
+      "prompt": "Base camp at the foot of Mount Everest: lots of bright yellow, orange and red tents dotted on rocky ice and snow, prayer flags strung between them; Zeb wraps a thick stripy scarf round his neck, Finn rubs his cold hands, Pasang laughs."
+    },
+    "p7": {
+      "id": "p7",
+      "img": "p07.webp",
+      "text": [
+        "Up they go, clipped to a rope. Sharp",
+        "spikes on their boots grip the ice."
+      ],
+      "next": "p8",
+      "prompt": "Finn, Zeb and Pasang climb a snowy slope in puffy down suits and helmets, each clipped to a long safety rope, with sharp metal spikes on their boots gripping the ice; close view of the spiky boot in the snow."
+    },
+    "p8": {
+      "id": "p8",
+      "img": "p08.webp",
+      "text": [
+        "Halfway up, the air is thin. They put",
+        "on masks to help. Keep calm and climb!"
+      ],
+      "next": "c2",
+      "prompt": "High on the snowy mountain, Finn, Zeb and Pasang wear small oxygen masks connected to little bottles on their backs, puffy down suits and goggles pushed up; they give each other a calm thumbs up; a sea of clouds below."
+    },
+    "c2": {
+      "id": "c2",
+      "img": "c02.webp",
+      "text": [
+        "Near the top, a dark cloud rolls in.",
+        "The wind howls. What should they do?"
+      ],
+      "choice": {
+        "kind": "big",
+        "options": [
+          {
+            "label": "Go on to the top",
+            "icon": "up",
+            "next": "b2a"
+          },
+          {
+            "label": "Wait for the wind to drop",
+            "icon": "clock",
+            "next": "b2b"
+          },
+          {
+            "label": "Ask Pasang",
+            "icon": "bulb",
+            "next": "b2c"
+          }
+        ],
+        "reveal": {
+          "text": "Real climbers pick a turn-back time before they set off. If they are not at the top by then, they go back down, because getting down safely matters just as much. Some wait for better weather, and some come back another year. What would you do?",
+          "source": "https://publications.americanalpineclub.org/articles/12199023100/Asia-Nepal-Everest"
+        }
+      },
+      "prompt": "Near the snowy summit ridge, a dark cloud rolls in and snow swirls in the wind; Finn, Zeb and Pasang in down suits and goggles huddle together on the safety rope, looking up at the summit, thinking what to do."
+    },
+    "b2a": {
+      "id": "b2a",
+      "img": "b2a.webp",
+      "text": [
+        "They keep going, step by step, slow and",
+        "hard. Pasang leads the way."
+      ],
+      "next": "p9",
+      "reveal": "c2",
+      "prompt": "Pasang leads Finn and Zeb step by step up the snowy summit ridge on the safety rope through swirling snow, heads down, slow and steady, determined."
+    },
+    "b2b": {
+      "id": "b2b",
+      "img": "b2b.webp",
+      "text": [
+        "They sit in a hollow and wait. Then the",
+        "dark cloud drifts off. Off they start!"
+      ],
+      "next": "p9",
+      "reveal": "c2",
+      "prompt": "Finn, Zeb and Pasang sit snugly in a sheltered snowy hollow sipping from flasks as the dark cloud drifts away and blue sky appears; then they stand up ready to go on."
+    },
+    "b2c": {
+      "id": "b2c",
+      "img": "b2c.webp",
+      "text": [
+        "Pasang looks at the sky. Wait a bit,",
+        "he says. Then the clouds part. Go!"
+      ],
+      "next": "p9",
+      "reveal": "c2",
+      "prompt": "Pasang studies the sky with a wise look while Finn and Zeb watch him; the clouds are parting to reveal the sunny summit above them."
+    },
+    "p9": {
+      "id": "p9",
+      "img": "p09.webp",
+      "text": [
+        "The top of Everest! Finn plants a flag.",
+        "They can see far over the peaks. Wow!"
+      ],
+      "next": "p10",
+      "prompt": "On the very top of Mount Everest under a deep blue sky, Finn plants a small flag in the snow, Zeb raises both arms in joy, and Pasang cheers; colourful prayer flags flutter on the summit and a sea of snowy peaks and clouds stretches far below."
+    },
+    "p10": {
+      "id": "p10",
+      "img": "p10.webp",
+      "text": [
+        "On the way down, they hear a roar. A",
+        "waterfall! It crashes into a dark gorge."
+      ],
+      "next": "c3",
+      "prompt": "Back down in a green valley, Finn, Zeb and Pasang in their mountain jackets stand on a rocky path and see a tall white waterfall crashing down a cliff into a deep dark gorge, spray rising; the boys cover their ears at the roar, amazed."
+    },
+    "c3": {
+      "id": "c3",
+      "img": "c03.webp",
+      "text": [
+        "The spray makes a rainbow! Stand in the",
+        "spray, or watch from far back?"
+      ],
+      "choice": {
+        "kind": "way",
+        "options": [
+          {
+            "label": "Stand in the spray",
+            "icon": "water",
+            "next": "b3a"
+          },
+          {
+            "label": "Watch from far back",
+            "icon": "eye",
+            "next": "b3b"
+          }
+        ]
+      },
+      "prompt": "A rainbow shines in the misty spray of the waterfall; a safe flat rock near the spray on one side, a grassy viewpoint further back on the other; Zeb points at the spray, Finn points at the viewpoint."
+    },
+    "b3a": {
+      "id": "b3a",
+      "img": "b3a.webp",
+      "text": [
+        "They stand in the spray. Splash!",
+        "Zeb starts to giggle. So wet!"
+      ],
+      "next": "p11",
+      "prompt": "Finn and Zeb stand on a safe flat rock in the cool misty spray of the waterfall, getting soaked and giggling, a rainbow arching over them; Pasang laughs from a dry spot nearby."
+    },
+    "b3b": {
+      "id": "b3b",
+      "img": "b3b.webp",
+      "text": [
+        "From far back they see a rainbow arch",
+        "over the gorge. It is so bright!"
+      ],
+      "next": "p11",
+      "prompt": "From a grassy viewpoint far back, Finn, Zeb and Pasang sit and admire a bright rainbow arching over the gorge in front of the tall waterfall."
+    },
+    "p11": {
+      "id": "p11",
+      "img": "p11.webp",
+      "text": [
+        "Stepping stones cross the river. Hop,",
+        "hop, hop! Zeb is a star at hopping."
+      ],
+      "next": "p12",
+      "prompt": "Big flat stepping stones cross a shallow sparkling river below the waterfall; Zeb hops from stone to stone with his arms out for balance, laughing, Finn hops behind him and Pasang waits on the far bank."
+    },
+    "p12": {
+      "id": "p12",
+      "img": "p12.webp",
+      "text": [
+        "A gorge, too far to step! Pasang clips",
+        "them to a rope. One, two, three... jump!"
+      ],
+      "next": "p13",
+      "prompt": "At the edge of a narrow rocky gorge with a river far below, Pasang clips Finn and Zeb's harnesses onto a strong safety rope tied to a tree; the boys crouch ready to jump, excited, counting down."
+    },
+    "p13": {
+      "id": "p13",
+      "img": "p13.webp",
+      "text": [
+        "They sail over the gorge and land on the",
+        "far side. Pasang cheers. What a star!"
+      ],
+      "next": "p14",
+      "prompt": "Finn and Zeb leap through the air over the narrow gorge, clipped safely to the rope in their harnesses, arms wide and faces joyful, landing on the soft grassy far side; Pasang cheers with both arms up."
+    },
+    "p14": {
+      "id": "p14",
+      "img": "p14.webp",
+      "text": [
+        "Back in the Den, Finn pins up a photo",
+        "of the top. A hard climb! Case cracked!"
+      ],
+      "next": null,
+      "prompt": "Back in the cosy explorer den, Finn pins a photo of the three of them on the snowy summit onto the corkboard of case notes, while Zeb, still wearing his woolly bobble hat, holds a toy yak; the wall screen shows the mountain with a big green tick."
+    }
+  },
+  "casefile": {
+    "title": "Mount Everest",
+    "subtitle": "The highest mountain on Earth. In Nepal it is called Sagarmatha.",
+    "img": "case.webp",
+    "chips": [
+      "The highest peak",
+      "In Nepal and China",
+      "First climbed in 1953"
+    ],
+    "facts": [
+      {
+        "text": "Mount Everest is 8,849 metres tall. That is about six and a half Ben Nevises stacked up!",
+        "source": "https://www.aljazeera.com/news/2020/12/8/mt-everest-nepal-china-announce-revised-height-at-8848-metres"
+      },
+      {
+        "text": "Tenzing Norgay, a Sherpa, and Edmund Hillary were the first people to reach the top, in 1953.",
+        "source": "https://www.nationalgeographic.com/adventure/features/everest/sir-edmund-hillary-tenzing-norgay-1953/"
+      },
+      {
+        "text": "At the top, each breath has only about a third of the oxygen you get at the seaside. That is why most climbers use oxygen masks.",
+        "source": "https://www.pbs.org/wgbh/nova/everest/exposure/higher.html"
+      }
+    ],
+    "prompt": "A Creature Cases style fact file portrait of Mount Everest: its huge snowy pyramid peak rising above the Himalayas under a deep blue sky, with a plume of snow blowing from the summit, colourful prayer flags in the foreground and a line of tiny tents at base camp; clean, bright, centred, like a collector card illustration, no people close up."
+  },
+  "quiz": [
+    {
+      "level": 1,
+      "q": "Which picture shows the top of Everest?",
+      "options": [
+        {
+          "text": "The top",
+          "img": "p9"
+        },
+        {
+          "text": "The trek",
+          "img": "p4"
+        },
+        {
+          "text": "The waterfall",
+          "img": "p10"
+        }
+      ],
+      "answer": 0,
+      "hint": "p9",
+      "why": "Finn planted a flag on the top of the world."
+    },
+    {
+      "level": 2,
+      "q": "Who led the way up the mountain?",
+      "options": [
+        {
+          "text": "Pasang"
+        },
+        {
+          "text": "A yak"
+        },
+        {
+          "text": "The farmer"
+        }
+      ],
+      "answer": 0,
+      "hint": "p3",
+      "why": "Pasang, a Sherpa guide."
+    },
+    {
+      "level": 3,
+      "q": "Why did they put on masks halfway up?",
+      "options": [
+        {
+          "text": "The air is thin up high"
+        },
+        {
+          "text": "It was dusty"
+        },
+        {
+          "text": "To keep their faces warm"
+        }
+      ],
+      "answer": 0,
+      "hint": "p8",
+      "why": "High up there is less air to breathe."
+    },
+    {
+      "level": 4,
+      "q": "Why did Pasang clip them to a rope before the jump?",
+      "options": [
+        {
+          "text": "To keep them safe"
+        },
+        {
+          "text": "To pull them up a hill"
+        },
+        {
+          "text": "To tie up the yaks"
+        }
+      ],
+      "answer": 0,
+      "hint": "p12",
+      "why": "A rope keeps you safe if you slip."
+    }
+  ],
+  "debrief": {
+    "question": "Would you go on to the top, or wait for the wind to drop? Why?"
+  },
+  "patch": {
+    "name": "Top of the World",
+    "icon": "mountain"
+  }
+}

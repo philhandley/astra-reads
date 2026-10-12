@@ -1,8 +1,8 @@
 // Chapter patches: a round embroidered-style badge in the theme colour with the theme icon and chapter number.
 import { PATHS } from './icons.js';
 
-const COLOURS = { dino: ['#e8792a', '#b8561a', '#fdebdc'], space: ['#5b57d6', '#3d3aa8', '#e8e7fb'], wild: ['#2f9e5b', '#1f7241', '#e1f4e8'], ocean: ['#1b8fd8', '#1267a0', '#e0f0fb'] };
-const ICONS = { dino: 'dino', space: 'rocket', wild: 'leaf', ocean: 'wave' };
+const COLOURS = { dino: ['#e8792a', '#b8561a', '#fdebdc'], space: ['#5b57d6', '#3d3aa8', '#e8e7fb'], wild: ['#2f9e5b', '#1f7241', '#e1f4e8'], ocean: ['#1b8fd8', '#1267a0', '#e0f0fb'], adventure: ['#d9473f', '#a8302a', '#fde4e1'] };
+const ICONS = { dino: 'dino', space: 'rocket', wild: 'leaf', ocean: 'wave', adventure: 'mountain' };
 
 export function patchSVG(book, { cls = 'patch', ghost = false } = {}) {
   const [c, dark, soft] = COLOURS[book.theme] || COLOURS.dino;

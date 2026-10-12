@@ -23,6 +23,8 @@ BROTHERS = ("The two brothers always look the same: FINN is six, taller, with sh
             "haircut, big blue eyes and a cheeky grin{zeb}. ")
 
 OUTFITS = {
+    'adventure': (', wearing a warm red mountain jacket, a woolly hat with a bobble, walking boots and a small rucksack',
+                  ', wearing a warm blue mountain jacket, a woolly hat with a bobble and walking boots'),
     'dino': (', wearing a khaki explorer shirt and shorts with an orange neckerchief',
              ', wearing the same khaki explorer outfit with a teal neckerchief'),
     'space': (', wearing a white and orange spacesuit (clear bubble helmet when outside on Mars)',

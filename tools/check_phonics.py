@@ -29,6 +29,8 @@ EY_AI = {'they', 'grey', 'obey', 'prey', 'hey', 'survey', 'whey', 'greys'}
 OU_NOT_OW = {'you', 'your', 'yours', 'could', 'would', 'should', 'four', 'pour', 'tour', 'soup', 'group', 'groups', 'through', 'thought', 'touch', 'young', 'country', 'cousin', 'double', 'trouble', 'shoulder', 'shoulders', 'boulder', 'boulders', 'mould', 'youth', 'route', 'courage', 'enough', 'tough', 'rough', 'cough', 'though', 'dough', 'famous', 'nervous', 'enormous', 'dangerous'}
 EAR_UR = {'learn', 'learns', 'learned', 'learnt', 'learning', 'early', 'earlier', 'earth', 'earn', 'earns', 'heard', 'search', 'searches', 'searched', 'pearl', 'pearls', 'yearn', 'rehearse'}
 EAR_AIR = {'bear', 'bears', 'pear', 'pears', 'wear', 'wears', 'tear', 'swear'}
+AL_AR = {'half', 'halfway', 'halves', 'calm', 'calmly', 'palm', 'palms', 'calf', 'calves'}
+AR_OR = {'war', 'warm', 'warmer', 'warmly', 'warn', 'warns', 'swarm', 'wart', 'quarter', 'towards', 'toward', 'dwarf'}
 OR_UR = {'work', 'works', 'worked', 'word', 'words', 'world', 'worlds', 'worm', 'worms', 'worse', 'worst', 'worth'}
 
 # Mirrors OVERRIDES in js/core/phonics.js (keep the two in step).
@@ -73,6 +75,12 @@ def sound_of(g, w, at_end):
         return 'ur' if w in EAR_UR else 'air' if w in EAR_AIR else 'ear'
     if g == 'or':
         return 'ur' if w in OR_UR else 'or'
+    if g == 'al':
+        return 'ar' if w in AL_AR else 'other'
+    if g == 'ar':
+        return 'or' if w in AR_OR else 'ar'
+    if g in ('air', 'are'):
+        return 'air'
     if g in ('ir', 'ur'):
         return 'ur'
     if g in ('aw', 'ore', 'au', 'aur', 'oar', 'oor'):

@@ -27,7 +27,8 @@
       "chapters": 10,
       "books": [
         "wild-1",
-        "wild-2"
+        "wild-2",
+        "wild-3"
       ]
     },
     {
@@ -38,6 +39,15 @@
       "books": [
         "ocean-1",
         "ocean-2"
+      ]
+    },
+    {
+      "id": "adventure",
+      "series": "Adventure Explorers",
+      "icon": "mountain",
+      "chapters": 10,
+      "books": [
+        "adventure-1"
       ]
     }
   ]

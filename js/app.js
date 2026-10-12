@@ -56,7 +56,7 @@ function renderHome() {
       card.innerHTML = `
       <div class="cover">${imgTag(b, b.cover, b.title)}${done ? `<span class="done">${icon('check')}</span>` : ''}</div>
       <div class="body">
-        <div class="series">${icon(t.icon)} ${esc(t.series)} <span class="chapno">Chapter ${b.chapter}</span></div>
+        <div class="series">${icon(t.icon)} ${esc(t.series)}</div>
         <h2>${esc(b.title)}</h2>
         <p class="blurb">${esc(b.blurb)}</p>
         <div class="foot"><span class="sound-badge"><span class="ph">${esc(b.sound.label)}</span><span class="sp">${b.sound.spellings.map(s => `<b>${esc(s)}</b>`).join(' ')}</span></span>
@@ -78,12 +78,12 @@ function renderHome() {
     home.appendChild(card);
   }
   mount(v);
-  if (!store.state.hello) showHello();
+  if (!store.state.hello && !/[?&]nohello/.test(location.search)) showHello();
 }
 
 function showHello() {
   const box = h(`<div class="col gap"><div class="eyebrow" style="color:var(--accent)">Welcome</div><h2>Hello, Finn and Zeb!</h2>
-    <p style="font-size:21px">Four series of Explorer Cases are on the shelf. Tap a number to pick a chapter. Finn reads the pages. Everyone talks about the choices. The Commander taps.</p>
+    <p style="font-size:21px">Explorer Cases are on the shelf. Tap a number to pick a chapter. Finn reads the pages. Everyone talks about the choices. The Commander taps.</p>
     <p class="muted">Tap any word to hear it and see its sound buttons. The speaker button reads a page out after you have had a go.</p>
     <div class="row" style="justify-content:flex-end"><button class="btn accent big" type="button">Let's go</button></div></div>`);
   const m = modal(box, { onClose: () => store.set({ hello: true }) });

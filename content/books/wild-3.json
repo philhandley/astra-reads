@@ -1,0 +1,422 @@
+{
+  "id": "wild-3",
+  "theme": "wild",
+  "chapter": 3,
+  "title": "Down the Burrow",
+  "blurb": "Zeb loves rabbits. With Finn's Shrink Torch, he goes down into a real rabbit burrow!",
+  "cover": "cover.webp",
+  "cover_prompt": "Finn and Zeb kneel on a sunny grassy hill full of rabbit holes, with several fluffy wild brown rabbits around them; Zeb is beaming and holding out his hands towards a rabbit that hops up to him, Finn holds a glowing torch-shaped gadget with a swirl on it.",
+  "outfits": [
+    ", wearing a khaki explorer shirt and shorts and a green safari hat, with binoculars round his neck",
+    ", wearing the same khaki explorer outfit and green safari hat, with a camera on a strap round his neck"
+  ],
+  "sound": {
+    "phoneme": "air",
+    "label": "/air/",
+    "say": "air, as in hair",
+    "spellings": [
+      "air",
+      "are",
+      "ear"
+    ],
+    "examples": {
+      "air": "hair",
+      "are": "care",
+      "ear": "bear"
+    },
+    "intro": "Listen for the /air/ sound, as in hair. In this story it is spelt three ways. Tap a word to hear it."
+  },
+  "tricky": [
+    "they",
+    "are",
+    "there",
+    "where",
+    "what",
+    "should",
+    "again",
+    "full"
+  ],
+  "words": {
+    "den": "d|e|n",
+    "ping": "p|i|ng",
+    "zebs": "z|e|b|s",
+    "kits": "k|i|t|s"
+  },
+  "start": "p1",
+  "cracked": "Rabbits live in burrows under the ground, and Zeb went down one! Finn and Zeb cracked the case!",
+  "pages": {
+    "p1": {
+      "id": "p1",
+      "img": "p01.webp",
+      "text": [
+        "Finn and Zeb are in the Den. Ping!",
+        "Zeb's best case yet: a pair of rabbits!"
+      ],
+      "next": "p2",
+      "prompt": "Inside the cosy explorer den full of maps and fossils, a big wall screen shows two fluffy wild brown rabbits on a grassy hill; Zeb jumps up and down with joy, hugging a toy rabbit, while Finn grins and grabs his binoculars."
+    },
+    "p2": {
+      "id": "p2",
+      "img": "p02.webp",
+      "text": [
+        "They go to a farm. The air is fresh.",
+        "A grassy hill is full of holes."
+      ],
+      "next": "p3",
+      "prompt": "A sunny green farm with a red barn and fields; Finn and Zeb walk up a grassy hill dotted with many round rabbit holes, breathing in the fresh air, a friendly farmer walking beside them."
+    },
+    "p3": {
+      "id": "p3",
+      "img": "p03.webp",
+      "text": [
+        "The farmer points. Rabbits live there,",
+        "in tunnels under the hill. Take care!"
+      ],
+      "next": "p4",
+      "prompt": "A friendly woman farmer with curly grey hair, a red checked shirt and green wellies points at the rabbit holes on the grassy hill; a cutaway shows a few tunnels running under the hill; Finn and Zeb look and listen."
+    },
+    "p4": {
+      "id": "p4",
+      "img": "p04.webp",
+      "text": [
+        "Then a rabbit pops up! Zeb stares.",
+        "It sniffs the air. Its ears twitch."
+      ],
+      "next": "c1",
+      "prompt": "A fluffy wild brown rabbit pops its head out of a hole on the grassy hill, sniffing the air with its long ears up; Zeb kneels close by, staring at it with huge delighted eyes, Finn behind him smiling."
+    },
+    "c1": {
+      "id": "c1",
+      "img": "c01.webp",
+      "text": [
+        "Where should they sit and watch?",
+        "On the hill, or by the hedge?"
+      ],
+      "choice": {
+        "kind": "way",
+        "options": [
+          {
+            "label": "Sit on the hill",
+            "icon": "mountain",
+            "next": "b1a"
+          },
+          {
+            "label": "Hide by the hedge",
+            "icon": "leaves",
+            "next": "b1b"
+          }
+        ]
+      },
+      "prompt": "Finn and Zeb stand at the edge of the grassy rabbit hill: on one side the open hilltop with rabbit holes, on the other a thick green hedge with wild flowers; Finn points at the hill, Zeb points at the hedge."
+    },
+    "b1a": {
+      "id": "b1a",
+      "img": "b1a.webp",
+      "text": [
+        "On the hill they keep still and stare.",
+        "A rabbit hops right past Zeb's feet!"
+      ],
+      "next": "p5",
+      "prompt": "Finn and Zeb sit very still on the grassy hill as a fluffy brown rabbit hops right past Zeb's feet; Zeb holds his breath with a delighted face, Finn watches."
+    },
+    "b1b": {
+      "id": "b1b",
+      "img": "b1b.webp",
+      "text": [
+        "By the hedge they spot a hare! It is",
+        "bigger, with long legs. Off it dashes!"
+      ],
+      "next": "p5",
+      "prompt": "Finn and Zeb crouch by a green hedge and see a brown hare with very long ears and long legs dashing off across the field; Finn points, Zeb gasps."
+    },
+    "p5": {
+      "id": "p5",
+      "img": "p05.webp",
+      "text": [
+        "Zeb wants to see down there. Finn has a",
+        "gadget to spare: the Shrink Torch!"
+      ],
+      "next": "p6",
+      "prompt": "Zeb peers longingly into a rabbit hole on the grassy hill while Finn holds up a shiny silver gadget shaped like a torch with a glowing swirl on its front, the Shrink Torch, grinning."
+    },
+    "p6": {
+      "id": "p6",
+      "img": "p06.webp",
+      "text": [
+        "Zap! Zeb shrinks to rabbit size. Finn",
+        "holds a string. Take care, Zeb!"
+      ],
+      "next": "p7",
+      "prompt": "A sparkly beam from Finn's Shrink Torch has shrunk Zeb to the size of a rabbit; tiny Zeb stands beside a rabbit hole wearing a little helmet with a head torch, a thin string tied round his waist; giant Finn kneels and holds the other end of the string, smiling."
+    },
+    "p7": {
+      "id": "p7",
+      "img": "p07.webp",
+      "text": [
+        "Down Zeb goes. The tunnel slopes like",
+        "stairs. It is dark, but he is not scared!"
+      ],
+      "next": "p8",
+      "prompt": "Inside a cosy earthy rabbit tunnel lit by tiny Zeb's head torch, the tunnel slopes down like stairs with roots hanging from the roof; tiny Zeb walks down bravely and happily, the thin string trailing behind him back up to the light."
+    },
+    "p8": {
+      "id": "p8",
+      "img": "p08.webp",
+      "text": [
+        "A rabbit sniffs his hair. It is kind!",
+        "It hops off, and Zeb follows it."
+      ],
+      "next": "p9",
+      "prompt": "In the underground tunnel, a friendly rabbit, now as big as tiny Zeb, gently sniffs his hair with its twitchy nose; Zeb giggles, then follows the rabbit deeper along the tunnel, his head torch glowing."
+    },
+    "p9": {
+      "id": "p9",
+      "img": "p09.webp",
+      "text": [
+        "In a snug nest of grass and fur, baby",
+        "rabbits sleep. Zeb stares. Kits!"
+      ],
+      "next": "p10",
+      "prompt": "In a snug round underground room lined with soft grass and fluffy fur, five tiny sleeping baby rabbits curl up together; tiny Zeb kneels beside them with his hands over his mouth, overjoyed, his head torch glowing softly."
+    },
+    "p10": {
+      "id": "p10",
+      "img": "p10.webp",
+      "text": [
+        "Up the stairs of earth Zeb climbs, into",
+        "the fresh air. Zap! He is big again."
+      ],
+      "next": "c2",
+      "prompt": "On the sunny grassy hill, Zeb is back to his normal size after a sparkly zap from the Shrink Torch, standing beside the rabbit hole and stretching his arms, while Finn coils up the string, both laughing."
+    },
+    "c2": {
+      "id": "c2",
+      "img": "c02.webp",
+      "text": [
+        "The rabbits nibble the farm crops.",
+        "It is not fair! What should they do?"
+      ],
+      "choice": {
+        "kind": "big",
+        "options": [
+          {
+            "label": "Put up a fence",
+            "icon": "hand",
+            "next": "b2a"
+          },
+          {
+            "label": "Let the rabbits share",
+            "icon": "heart",
+            "next": "b2b"
+          },
+          {
+            "label": "Plant a patch for them",
+            "icon": "leaf",
+            "next": "b2c"
+          }
+        ],
+        "reveal": {
+          "text": "Farmers and rabbit fans do not always agree. Some farmers put up rabbit-proof fences to keep their crops safe. Some farms leave wild strips at the edges of fields for animals. People still talk about the best way. What would you do?",
+          "source": "https://www.gov.uk/countryside-stewardship-grants/rabbit-fencing-supplement-fg4"
+        }
+      },
+      "prompt": "At the edge of a field of young green crops, a few rabbits nibble the leafy plants; the friendly woman farmer with curly grey hair and green wellies stands with her hands on her hips looking puzzled; Finn and Zeb look from the rabbits to the farmer, thinking."
+    },
+    "b2a": {
+      "id": "b2a",
+      "img": "b2a.webp",
+      "text": [
+        "A fence goes up. The crops are safe.",
+        "The rabbits stare, then hop to the hill."
+      ],
+      "next": "c3",
+      "reveal": "c2",
+      "prompt": "Finn, Zeb and the farmer finish putting up a wire mesh fence round the field of crops; on the other side the rabbits stare at it, then hop away towards their grassy hill."
+    },
+    "b2b": {
+      "id": "b2b",
+      "img": "b2b.webp",
+      "text": [
+        "They let the rabbits share the field.",
+        "The farmer grins. There is lots to share!"
+      ],
+      "next": "c3",
+      "reveal": "c2",
+      "prompt": "Rabbits nibble happily at one corner of the big crop field while the friendly farmer grins and shrugs; Finn and Zeb sit on the gate watching, smiling."
+    },
+    "b2c": {
+      "id": "b2c",
+      "img": "b2c.webp",
+      "text": [
+        "They plant a patch of clover just for",
+        "the rabbits. The crops are spared!"
+      ],
+      "next": "c3",
+      "reveal": "c2",
+      "prompt": "Finn and Zeb plant a little patch of clover with pink flowers beside the rabbit hill, and the rabbits come to munch it, leaving the farm crops alone; the farmer gives a thumbs up."
+    },
+    "c3": {
+      "id": "c3",
+      "img": "c03.webp",
+      "text": [
+        "The sun sets. Go home now, or wait for",
+        "the rabbits to come out and play?"
+      ],
+      "choice": {
+        "kind": "way",
+        "options": [
+          {
+            "label": "Go home now",
+            "icon": "home",
+            "next": "b3a"
+          },
+          {
+            "label": "Wait and watch",
+            "icon": "clock",
+            "next": "b3b"
+          }
+        ]
+      },
+      "prompt": "Golden sunset over the farm and the grassy rabbit hill; the farmhouse lights glow on one side, and a few rabbit ears poke up from holes on the other; Finn looks towards home, Zeb tugs his sleeve towards the rabbits."
+    },
+    "b3a": {
+      "id": "b3a",
+      "img": "b3a.webp",
+      "text": [
+        "They wave to the farmer and head home",
+        "in the fresh air. What a fair day!"
+      ],
+      "next": "p11",
+      "prompt": "Finn and Zeb wave goodbye to the friendly farmer at the farm gate and walk home down a country lane at sunset, happy and tired."
+    },
+    "b3b": {
+      "id": "b3b",
+      "img": "b3b.webp",
+      "text": [
+        "At dusk, lots of rabbits pop up!",
+        "They hop and play. Zeb stares and grins."
+      ],
+      "next": "p11",
+      "prompt": "At dusk, lots of rabbits pop up out of their holes on the grassy hill and hop and play together in the soft evening light; Zeb lies on his tummy staring and grinning, Finn beside him."
+    },
+    "p11": {
+      "id": "p11",
+      "img": "p11.webp",
+      "text": [
+        "Back in the Den, Zeb draws a pair of",
+        "rabbits. His best case! Case cracked!"
+      ],
+      "next": null,
+      "prompt": "Back in the cosy explorer den, Zeb proudly holds up his crayon drawing of two rabbits, and Finn pins it onto the corkboard of case notes; the wall screen shows a rabbit with a big green tick."
+    }
+  },
+  "casefile": {
+    "title": "Rabbit",
+    "subtitle": "Lives in a warren of tunnels.",
+    "img": "case.webp",
+    "chips": [
+      "Eats grass",
+      "Lives underground",
+      "Babies are called kits"
+    ],
+    "facts": [
+      {
+        "text": "Up to 30 rabbits can share one warren, a home of tunnels and rooms under the ground.",
+        "source": "https://mammal.org.uk/british-mammals/european-rabbit"
+      },
+      {
+        "text": "Baby rabbits are called kits. They are born blind, and their eyes open when they are about 10 days old.",
+        "source": "https://mammal.org.uk/british-mammals/european-rabbit"
+      },
+      {
+        "text": "A rabbit's teeth never stop growing, so it chews and chews to keep them short.",
+        "source": "https://www.pdsa.org.uk/what-we-do/blog/10-things-you-might-not-know-about-rabbits"
+      }
+    ],
+    "prompt": "A Creature Cases style fact file portrait of a wild European rabbit sitting up on a grassy bank beside a burrow entrance, soft brown fur, long ears up, big dark eye, white fluffy tail showing; a cutaway shows the tunnels of the warren underground; clean, bright, centred, like a collector card illustration, no people."
+  },
+  "quiz": [
+    {
+      "level": 1,
+      "q": "Which picture shows Zeb in the burrow?",
+      "options": [
+        {
+          "text": "In the burrow",
+          "img": "p7"
+        },
+        {
+          "text": "On the farm",
+          "img": "p2"
+        },
+        {
+          "text": "A rabbit pops up",
+          "img": "p4"
+        }
+      ],
+      "answer": 0,
+      "hint": "p7",
+      "why": "Down the tunnel, with his head torch on."
+    },
+    {
+      "level": 2,
+      "q": "What made Zeb small?",
+      "options": [
+        {
+          "text": "The Shrink Torch"
+        },
+        {
+          "text": "A magic hat"
+        },
+        {
+          "text": "A big spoon"
+        }
+      ],
+      "answer": 0,
+      "hint": "p5",
+      "why": "Finn's gadget. Zap!"
+    },
+    {
+      "level": 3,
+      "q": "Why did Finn hold a string?",
+      "options": [
+        {
+          "text": "So Zeb could find his way back up"
+        },
+        {
+          "text": "To fly a kite"
+        },
+        {
+          "text": "To catch a rabbit"
+        }
+      ],
+      "answer": 0,
+      "hint": "p6",
+      "why": "The string led Zeb back up the tunnel."
+    },
+    {
+      "level": 4,
+      "q": "Why was the farmer cross with the rabbits?",
+      "options": [
+        {
+          "text": "They nibble the crops"
+        },
+        {
+          "text": "They are too loud"
+        },
+        {
+          "text": "They chase the hens"
+        }
+      ],
+      "answer": 0,
+      "hint": "c2",
+      "why": "Rabbits eat the plants the farmer grows."
+    }
+  ],
+  "debrief": {
+    "question": "If you could shrink like Zeb, which animal's home would you go into?"
+  },
+  "patch": {
+    "name": "Down the Burrow",
+    "icon": "rabbit"
+  }
+}

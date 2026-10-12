@@ -57,6 +57,8 @@ export const PATHS = {
   snail: '<circle cx="10" cy="13" r="5"/><path d="M10 13a2 2 0 1 1 2-2"/><path d="M15 15c3 0 4-3 4-6M17 9V6M19 9V6"/><path d="M3 18h16"/>',
   bubble: '<circle cx="9" cy="14" r="5"/><circle cx="16" cy="7" r="3"/><circle cx="18" cy="15" r="1.5"/>',
   heart: '<path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/>',
+  rabbit: '<path d="M9 10C7 7 7 3 8.5 3S11 6 11 10"/><path d="M13 10c0-4 1-7 2.5-7S17 7 15 10"/><ellipse cx="12" cy="15" rx="6" ry="5.5"/><path d="M10 14h.01M14 14h.01"/><path d="M11 17h2"/>',
+  flag: '<path d="M5 21V4"/><path d="M5 4h12l-3 4 3 4H5"/>',
   bolt: '<path d="M13 3 5 13h6l-1 8 8-10h-6z"/>',
 };
 
