@@ -14,12 +14,13 @@ Astra Finn (`C:\1 Astra Nova - Finn`, the space app), Astra Maths (`C:\1. Astra 
 - Local test server: `python -m http.server 8300 --bind 127.0.0.1` (8100 is the maths app, 8200 is Bleeps).
 - git with Git Credential Manager; no `gh`.
 - Bash heredocs with apostrophes break in this shell: write files with the Write tool.
+- Windows Smart App Control is on: pip packages with new unsigned native DLLs (safetensors, spaCy, scikit-learn) are blocked. Do not change that setting; Kokoro voices run in the browser instead (`tools/voice_server.py` + `dev/voices-make.html`).
 
 ## Technical rules
 - Plain HTML, CSS and ES-module JavaScript. No libraries. Google Fonts (Andika for story text, Lexend for the interface) is the only third-party request.
 - Relative paths everywhere (GitHub Pages sub-path).
 - `localStorage` key `astrareads.v1` only. No backend, accounts or analytics.
-- Pictures: generated to the style brief in `tools/prompts.py` (one brief per page, stored in the book JSON as `prompt`), brought in with `tools/img_in.py` (trims white bars, 1600 px, WebP, 300 KB max). The page renderer falls back to a soft tinted block if a picture is missing, but every shipped page should have one.
+- Pictures: only Figma `generate_image` with `gemini-3.1-flash-image` (or the same Gemini model by API), so every book matches. Codex (gpt-image) was tried on 12 Oct 2026 and rejected as inconsistent; do not use it for book pictures. For reference only, the old Codex route was: `python tools/codex_images.py <book> --refs <ref1.png> <ref2.png> --` makes every missing picture three at a time with the Codex app's image generation, passing existing pictures as references for the boys and the style; check them with `python -I tools/contact_sheet.py <book>`. (2) Figma `generate_image` (3,000 AI credits a month on the Professional plan, about 15 a picture). Either way, pictures follow the style brief in `tools/prompts.py` (one brief per page, stored in the book JSON as `prompt`), brought in with `tools/img_in.py` (trims white bars, 1600 px, WebP, 300 KB max). The page renderer falls back to a soft tinted block if a picture is missing, but every shipped page should have one.
 - Speech is the browser's `speechSynthesis`, preferring an en-GB voice (`js/core/speak.js`).
 
 ## Reading rules (PLAN.md section 2)

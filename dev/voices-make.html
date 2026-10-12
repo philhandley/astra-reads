@@ -1,0 +1,32 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><title>Make voice samples</title>
+<style>body{font-family:system-ui,sans-serif;padding:24px;background:#faf8f3} pre{background:#fff;padding:12px;border-radius:12px}</style></head>
+<body><h1>Making voice samples</h1><script>if (/[?&]hold=/.test(location.search)) document.write('<iframe src="/__hold?s=' + location.search.match(/hold=(\d+)/)[1] + '" style="display:none"></iframe>');</script><pre id="log">starting…</pre>
+<script type="module">
+// Kokoro-82M running in the browser (WASM). Needs tools/voice_server.py to save the files.
+import { KokoroTTS } from "https://cdn.jsdelivr.net/npm/kokoro-js@1.2.1/+esm";
+const logEl = document.getElementById('log');
+const log = s => { logEl.textContent += '\n' + s; window.__voiceLog = logEl.textContent; };
+window.__voiceDone = false;
+const SAMPLES = [
+  ["page", "It is hot and wet. Giant ferns sway. A big footprint! Zeb can fit inside it."],
+  ["question", "One baby is out of the nest, in the rain. What should they do? Lift it back in. Wait for the mum. Or make a leaf shelter."],
+  ["fact", "Maiasaura means good mother lizard. The mums looked after their babies for a long time."],
+  ["words", "wait. stay. race."],
+];
+const VOICES = (new URLSearchParams(location.search).get('voices') || 'bf_emma,bf_isabella,bf_alice,bf_lily').split(',');
+try {
+  const t0 = performance.now();
+  const tts = await KokoroTTS.from_pretrained("onnx-community/Kokoro-82M-v1.0-ONNX", { dtype: "q8", device: "wasm" });
+  log(`model loaded in ${((performance.now() - t0) / 1000).toFixed(0)}s`);
+  for (const voice of VOICES) {
+    for (const [name, text] of SAMPLES) {
+      const t = performance.now();
+      const audio = await tts.generate(text, { voice, speed: 0.9 });
+      const res = await fetch(`/save?name=kokoro-${voice}-${name}.wav`, { method: 'POST', body: audio.toBlob() });
+      log(`${voice} ${name}: ${res.status} in ${((performance.now() - t) / 1000).toFixed(1)}s`);
+    }
+  }
+  log('DONE');
+} catch (e) { log('ERROR ' + (e && e.stack || e)); }
+window.__voiceDone = true;
+</script></body></html>
