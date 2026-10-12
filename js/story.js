@@ -44,7 +44,8 @@ export function startBook(book, mount, { step = 'cover', page = null } = {}) {
   const wordHtml = w => `<span class="w" data-w="${esc(w)}">${markWord(w, sound.phoneme, spellings, overrides, tricky)}</span>`;
   const lineHtml = line => tokens(line).map(t => t.word ? wordHtml(t.word) : esc(t.sep)).join('');
   const linesHtml = lines => lines.map(l => `<span class="line">${lineHtml(l)}</span>`).join('');
-  const plain = lines => sentences(...lines);
+  // Lines often break mid-sentence, so join them before adding any full stop.
+  const plain = lines => sentences((lines || []).join(' '));
 
   function exitButton() {
     const b = h(`<button class="fbtn" type="button" aria-label="Back to the shelf">${icon('home')}</button>`);

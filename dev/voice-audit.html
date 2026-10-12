@@ -1,0 +1,36 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><title>Voice audit</title></head>
+<body><script>if (/[?&]hold=/.test(location.search)) document.write('<iframe src="/__hold?s=' + location.search.match(/hold=(\d+)/)[1] + '" style="display:none"></iframe>');</script><pre id="log">audit</pre>
+<script type="module">
+// Checks that every line and word the app can say has a clip in assets/audio, and that every clip decodes.
+import { allLines } from './voice-lines.js';
+const logEl = document.getElementById('log');
+const lines = [];
+const log = s => { lines.push(s); logEl.textContent += '\n' + s; };
+try {
+  const L = await allLines('../');
+  const index = await (await fetch('../assets/audio/index.json', { cache: 'no-store' })).json();
+  const missS = L.sentences.filter(s => !index.s[s.id]);
+  const missW = L.words.filter(w => !index.w[w.key]);
+  log(`sentences ${L.sentences.length - missS.length}/${L.sentences.length} have clips, words ${L.words.length - missW.length}/${L.words.length}`);
+  missS.slice(0, 20).forEach(s => log('  missing: ' + s.text));
+  missW.slice(0, 20).forEach(w => log('  missing word: ' + w.text));
+  const packs = await Promise.all(index.packs.map(n => fetch(`../assets/audio/${n}.bin`, { cache: 'no-store' }).then(r => r.arrayBuffer())));
+  const ctx = new OfflineAudioContext(1, 48000, 48000);
+  let ok = 0, bad = 0, secs = 0, longest = 0, longText = '';
+  const texts = new Map(L.sentences.map(s => [s.id, s.text]));
+  for (const [kind, table] of [['s', index.s], ['w', index.w]]) {
+    for (const [k, [p, off, len]] of Object.entries(table)) {
+      try {
+        const b = await ctx.decodeAudioData(packs[p].slice(off, off + len));
+        if (b.duration < 0.15) throw new Error('too short ' + b.duration.toFixed(2));
+        ok++; secs += b.duration;
+        if (kind === 's' && b.duration > longest) { longest = b.duration; longText = texts.get(k); }
+      } catch (e) { bad++; log(`  BAD ${kind} ${k} ${texts.get(k) || ''}: ${e.message}`); }
+    }
+  }
+  log(`decoded ${ok} clips, ${bad} bad, ${Math.round(secs)} s of speech; longest sentence ${longest.toFixed(1)} s: ${longText}`);
+  log('DONE');
+} catch (e) { log('ERROR ' + ((e && e.stack) || e)); }
+await fetch('/voice/log', { method: 'POST', body: lines.join('\n') }).catch(() => {});
+await fetch('/voice/done', { method: 'POST' }).catch(() => {});
+</script></body></html>

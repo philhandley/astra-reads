@@ -1,0 +1,34 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><title>Voice probe</title></head>
+<body><script>if (/[?&]hold=/.test(location.search)) document.write('<iframe src="/__hold?s=' + location.search.match(/hold=(\d+)/)[1] + '" style="display:none"></iframe>');</script><pre id="log">probe</pre>
+<script type="module">
+// Lists what dev/voice-build.html would record and how Kokoro's phonemizer reads tricky bits.
+import { allLines } from './voice-lines.js';
+import { phonemize } from "https://cdn.jsdelivr.net/npm/phonemizer@1.2.1/+esm";
+const logEl = document.getElementById('log');
+const lines = [];
+const log = s => { lines.push(s); logEl.textContent += '\n' + s; };
+try {
+  const L = await allLines('../');
+  const secs = L.sentences.reduce((n, s) => n + s.text.split(' ').length / 2.4, 0);
+  log(`books ${L.books.length}, sentences ${L.sentences.length}, words ${L.words.length}, collisions ${L.collisions.length}, about ${Math.round(secs)} s of sentences`);
+  L.collisions.forEach(c => log('COLLISION ' + JSON.stringify(c)));
+  log('--- sentences with digits, capitals or symbols');
+  L.sentences.filter(s => /\d|\b[A-Z]{2,}\b|[%°&\/+=#@]|\b[A-Z]\.|\bm\b|\bkm\b|\bkg\b/.test(s.text)).forEach(s => log(s.text));
+  log('--- very short sentences');
+  L.sentences.filter(s => s.text.length <= 6).forEach(s => log(JSON.stringify(s.text)));
+  log('--- odd words');
+  L.words.filter(w => /[^a-z']/.test(w.key) || w.key.length === 1).forEach(w => log(JSON.stringify(w.text)));
+  const probe = (new URLSearchParams(location.search).get('say') || '').split('|').filter(Boolean);
+  const defaults = ['A.', 'B.', 'C.', 'D.', 'A, B, C, D.', 'ay, as in wait.', 'or, as in horn.', 'oa, as in boat.', 'oo, as in blue.', 'igh, as in night.', 'ow, as in down.', 'ee, as in deep.', 'ur, as in bird.', 'air, as in hair.', 'ar, as in far.', 'Pasang', 'Sherpa', 'Everest', 'Nepal', 'Maiasaura', 'Triceratops', 'Zeb', 'Finn', 'eh, as in far', 'eye, as in night', 'oh, as in boat', 'ah, as in far'];
+  log('--- phonemes (en)');
+  for (const t of (probe.length ? probe : defaults)) log(`${t} => ${(await phonemize(t, 'en')).join(' ')}`);
+  log('--- encoder');
+  for (const sr of [24000, 48000]) {
+    const r = await AudioEncoder.isConfigSupported({ codec: 'opus', sampleRate: sr, numberOfChannels: 1, bitrate: 32000 }).catch(e => ({ supported: 'error ' + e }));
+    log(`opus ${sr}: ${r.supported}`);
+  }
+  log('DONE');
+} catch (e) { log('ERROR ' + (e && e.stack || e)); }
+await fetch('/voice/log', { method: 'POST', body: lines.join('\n') }).catch(() => {});
+await fetch('/voice/done', { method: 'POST' }).catch(() => {});
+</script></body></html>

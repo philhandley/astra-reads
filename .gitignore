@@ -8,3 +8,5 @@ dev/test-*.html
 !dev/test-sw.html
 dev/voices/
 dev/voices.html
+tools/voice/clips/
+tools/voice/progress.log

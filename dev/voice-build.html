@@ -1,0 +1,107 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><title>Record the voice</title>
+<style>body{font-family:system-ui,sans-serif;padding:24px;background:#faf8f3} pre{background:#fff;padding:12px;border-radius:12px;white-space:pre-wrap}</style></head>
+<body><h1>Recording Isabella</h1><script>if (/[?&]hold=/.test(location.search)) document.write('<iframe src="/__hold?s=' + location.search.match(/hold=(\d+)/)[1] + '" style="display:none"></iframe>');</script><pre id="log">starting…</pre>
+<script type="module">
+// Records every line and word in dev/voice-lines.js with Kokoro bf_isabella, in several workers at once.
+// Needs tools/voice_server.py (port 8303). Skips clips that already exist, so it can be re-run.
+//   ?workers=8   how many voices run side by side
+//   ?limit=40    only this many new clips (a trial)
+//   ?redo=a1b2c3d4,e5f6a7b8  record these clip ids again
+//   ?hold=7200   keep a headless browser on the page until done (with --dump-dom)
+import { allLines } from './voice-lines.js';
+import { phonemize } from "https://cdn.jsdelivr.net/npm/phonemizer@1.2.1/+esm";
+
+const SENTENCE_SPEED = 0.85; // "slower, with pauses"
+const WORD_SPEED = 0.9;      // single words as before, not slowed
+const GAP = 0.35;            // seconds of quiet between sentences, added at playback
+
+// Text the voice reads in place of what is shown, where it would read letters or the wrong sound.
+const RESPELL = [
+  [/(\d) km\b/g, '$1 kilometres'],
+  [/(\d) kg\b/g, '$1 kilograms'],
+  [/^Shh\.$/, 'Shush.'],
+];
+// The sound card: say the pure sound. espeak reads "ay" as eye, "oa" as oh-uh, "igh" as ig, "ow" as owe.
+const SOUND = { ay: 'ˈeɪ', oa: 'ˈəʊ', igh: 'ˈaɪ', ow: 'ˈaʊ' };
+// Single words read differently on their own.
+const WORD_PHONEMES = { a: 'ˈʌ.' };
+
+const q = new URLSearchParams(location.search);
+const WORKERS = +q.get('workers') || 8;
+const LIMIT = +q.get('limit') || Infinity;
+const REDO = new Set((q.get('redo') || '').split(',').filter(Boolean));
+
+const logEl = document.getElementById('log');
+const say = s => { logEl.textContent += '\n' + s; fetch('/voice/log', { method: 'POST', body: s }).catch(() => {}); };
+
+// Same clean-up Kokoro applies after espeak (kokoro-js 1.2.1), for lines given as phonemes.
+const post = p => p.replace(/ʲ/g, 'j').replace(/r/g, 'ɹ').replace(/x/g, 'k').replace(/ɬ/g, 'l').trim();
+const ph = async t => (await phonemize(t, 'en')).join(' ');
+
+async function plan(s) {
+  let text = s.text;
+  for (const [re, to] of RESPELL) text = text.replace(re, to);
+  const m = s.text.match(/^The sound of the story is (\w+), as in (\w+)\.$/);
+  if (m && SOUND[m[1]]) return { text, phonemes: post(`${await ph('The sound of the story is')} ${SOUND[m[1]]}, ${await ph('as in ' + m[2])}.`) };
+  return { text };
+}
+
+try {
+  const L = await allLines('../');
+  if (L.collisions.length) throw new Error('clip id collision: ' + JSON.stringify(L.collisions));
+  await fetch('/voice/lines', { method: 'POST', body: JSON.stringify({ voice: 'bf_isabella', sentenceSpeed: SENTENCE_SPEED, wordSpeed: WORD_SPEED, gap: GAP, sentences: L.sentences, words: L.words }, null, 1) });
+  const have = await (await fetch('/voice/have')).json();
+  const hs = new Set(have.s), hw = new Set(have.w);
+  const jobs = [];
+  for (const s of L.sentences) if (!hs.has(s.id) || REDO.has(s.id)) jobs.push({ kind: 's', id: s.id, show: s.text, speed: SENTENCE_SPEED, ...(await plan(s)) });
+  for (const w of L.words) if (!hw.has(w.id) || REDO.has(w.id)) {
+    const p = WORD_PHONEMES[w.key];
+    jobs.push({ kind: 'w', id: w.id, show: w.text, speed: WORD_SPEED, text: w.text + '.', ...(p ? { phonemes: p } : {}) });
+  }
+  if (jobs.length > LIMIT) jobs.length = LIMIT;
+  say(`${L.sentences.length} sentences, ${L.words.length} words; ${hs.size + hw.size} clips already made; ${jobs.length} to record with ${WORKERS} workers`);
+
+  let next = 0, done = 0, failed = 0, audio = 0;
+  const t0 = performance.now();
+  const check = new OfflineAudioContext(1, 48000, 48000);
+  await new Promise(resolve => {
+    if (!jobs.length) return resolve();
+    let live = 0;
+    const feed = w => {
+      if (next >= jobs.length) { w.terminate(); if (--live === 0) resolve(); return; }
+      w.postMessage({ type: 'job', ...jobs[next++] });
+    };
+    const start = () => {
+      const w = new Worker('./voice-worker.js', { type: 'module' });
+      live++;
+      w.onmessage = async ({ data: m }) => {
+        if (m.type === 'ready') return feed(w);
+        if (m.type === 'error') { failed++; say(`FAILED ${m.job.kind} ${m.job.id} ${JSON.stringify(m.job.show)}: ${m.error.split('\n')[0]}`); return feed(w); }
+        const j = m.job;
+        try {
+          const buf = await check.decodeAudioData(m.ogg.buffer.slice(0));
+          if (Math.abs(buf.duration - m.secs) > 0.06) throw new Error(`decoded ${buf.duration.toFixed(2)} s, expected ${m.secs.toFixed(2)} s`);
+          const r = await fetch(`/voice/clip?kind=${j.kind}&id=${j.id}`, { method: 'POST', body: m.ogg });
+          if (!r.ok) throw new Error('save ' + r.status);
+          done++; audio += m.secs;
+        } catch (e) { failed++; say(`BAD ${j.kind} ${j.id} ${JSON.stringify(j.show)}: ${e.message}`); }
+        if ((done + failed) % 50 === 0 || done + failed === jobs.length) {
+          const el = (performance.now() - t0) / 1000;
+          const left = el / (done + failed) * (jobs.length - done - failed);
+          say(`${done + failed}/${jobs.length} in ${Math.round(el)} s (${Math.round(audio)} s of audio), about ${Math.round(left / 60)} min left`);
+        }
+        feed(w);
+      };
+      w.onerror = e => { say('WORKER ERROR ' + (e.message || e)); };
+      w.postMessage({ type: 'init' });
+      return w;
+    };
+    // One worker fetches the model first; the rest then load it from the browser cache.
+    const first = start();
+    const firstReady = new Promise(r => first.addEventListener('message', ({ data }) => data.type === 'ready' && r(), { once: true }));
+    firstReady.then(() => { for (let i = 1; i < Math.min(WORKERS, jobs.length); i++) start(); });
+  });
+  say(`DONE: ${done} recorded, ${failed} failed, ${Math.round(audio)} s of audio in ${Math.round((performance.now() - t0) / 1000)} s`);
+} catch (e) { say('ERROR ' + ((e && e.stack) || e)); }
+await fetch('/voice/done', { method: 'POST' }).catch(() => {});
+</script></body></html>

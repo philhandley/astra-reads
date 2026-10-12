@@ -7,8 +7,9 @@ import { speakButton, hush, confetti } from './core/ui.js';
 import { patchSVG } from './core/patch.js';
 
 const LEVELS = { 1: 'Find it', 2: 'Tell me', 3: 'Explain it', 4: 'Think about it' };
-const YES = ['Yes!', 'That is it!', 'Spot on!', 'You found it!'];
-const NO = ['Not that one. Have another look.', 'Hmm, not quite. Try again.', 'Good try! Look back and see.'];
+export const YES = ['Yes!', 'That is it!', 'Spot on!', 'You found it!'];
+export const FAVOURITE = 'What was your favourite part?';
+export const NO = ['Not that one. Have another look.', 'Hmm, not quite. Try again.', 'Good try! Look back and see.'];
 
 export function runQuiz(book, mount, state, { imgTag, themeCls, step = 'quiz' } = {}) {
   const readAloud = () => store.state.readQuestions;
@@ -80,7 +81,7 @@ export function runQuiz(book, mount, state, { imgTag, themeCls, step = 'quiz' } 
   function showDebrief() {
     hush();
     const d = book.debrief || {};
-    const q1 = 'What was your favourite part?';
+    const q1 = FAVOURITE;
     const v = h(`<section class="view stage ${themeCls}"><div class="card">
       <div class="side"><div class="img">${imgTag(book, book.cover, book.title)}</div></div>
       <div class="main">
