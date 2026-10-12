@@ -1,0 +1,59 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><title>Tune the voice</title>
+<style>body{font-family:system-ui,sans-serif;padding:24px;background:#faf8f3} pre{background:#fff;padding:12px;border-radius:12px}</style></head>
+<body><h1>Tuning Isabella</h1><script>if (/[?&]hold=/.test(location.search)) document.write('<iframe src="/__hold?s=' + location.search.match(/hold=(\d+)/)[1] + '" style="display:none"></iframe>');</script><pre id="log">starting…</pre>
+<script type="module">
+// Each sentence is spoken on its own (its own rise and fall), then joined with short silences.
+// Single words get a longer gap. Needs tools/voice_server.py to save the files.
+import { KokoroTTS } from "https://cdn.jsdelivr.net/npm/kokoro-js@1.2.1/+esm";
+const logEl = document.getElementById('log');
+const log = s => { logEl.textContent += '\n' + s; };
+const SAMPLES = [
+  ["page", "It is hot and wet. Giant ferns sway. A big footprint! Zeb can fit inside it."],
+  ["question", "One baby is out of the nest, in the rain. What should they do? Lift it back in. Wait for the mum. Or make a leaf shelter."],
+  ["fact", "Maiasaura means good mother lizard. The mums looked after their babies for a long time."],
+  ["words", "wait|stay|race"],
+];
+const VARIANTS = [
+  { tag: "a", speed: 0.85, sentenceGap: 0.35, wordGap: 0.8 },
+  { tag: "b", speed: 0.8, sentenceGap: 0.5, wordGap: 1.1 },
+];
+function wav(samples, sr) {
+  const b = new ArrayBuffer(44 + samples.length * 2), v = new DataView(b);
+  const w = (o, s) => [...s].forEach((c, i) => v.setUint8(o + i, c.charCodeAt(0)));
+  w(0, 'RIFF'); v.setUint32(4, 36 + samples.length * 2, true); w(8, 'WAVE'); w(12, 'fmt ');
+  v.setUint32(16, 16, true); v.setUint16(20, 1, true); v.setUint16(22, 1, true); v.setUint32(24, sr, true);
+  v.setUint32(28, sr * 2, true); v.setUint16(32, 2, true); v.setUint16(34, 16, true); w(36, 'data'); v.setUint32(40, samples.length * 2, true);
+  for (let i = 0; i < samples.length; i++) v.setInt16(44 + i * 2, Math.max(-1, Math.min(1, samples[i])) * 0x7fff, true);
+  return new Blob([b], { type: 'audio/wav' });
+}
+function trim(a, sr) { // cut quiet lead-in and tail so gaps are even
+  const th = 0.01; let s = 0, e = a.length - 1;
+  while (s < a.length && Math.abs(a[s]) < th) s++;
+  while (e > s && Math.abs(a[e]) < th) e--;
+  return a.subarray(Math.max(0, s - sr * 0.03), Math.min(a.length, e + sr * 0.08));
+}
+try {
+  const tts = await KokoroTTS.from_pretrained("onnx-community/Kokoro-82M-v1.0-ONNX", { dtype: "q8", device: "wasm" });
+  log('model loaded');
+  for (const V of VARIANTS) {
+    for (const [name, text] of SAMPLES) {
+      const isWords = name === 'words';
+      const parts = isWords ? text.split('|') : text.match(/[^.!?]+[.!?]+/g).map(s => s.trim());
+      const gap = isWords ? V.wordGap : V.sentenceGap;
+      const pieces = []; let sr = 24000;
+      for (const p of parts) {
+        const audio = await tts.generate(isWords ? p + '.' : p, { voice: 'bf_isabella', speed: isWords ? V.speed - 0.05 : V.speed });
+        sr = audio.sampling_rate; pieces.push(trim(audio.audio, sr));
+      }
+      const silence = new Float32Array(Math.round(sr * gap));
+      const lead = new Float32Array(Math.round(sr * 0.15));
+      const total = lead.length * 2 + pieces.reduce((n, p) => n + p.length, 0) + silence.length * (pieces.length - 1);
+      const out = new Float32Array(total); let o = lead.length;
+      pieces.forEach((p, i) => { out.set(p, o); o += p.length; if (i < pieces.length - 1) o += silence.length; });
+      const res = await fetch(`/save?name=isabella-${V.tag}-${name}.wav`, { method: 'POST', body: wav(out, sr) });
+      log(`${V.tag} ${name}: ${res.status}`);
+    }
+  }
+  log('DONE');
+} catch (e) { log('ERROR ' + (e && e.stack || e)); }
+</script></body></html>
